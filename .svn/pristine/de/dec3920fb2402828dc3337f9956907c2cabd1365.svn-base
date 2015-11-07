@@ -1,0 +1,408 @@
+<%= render 'layouts/header' %>
+<div class="wind" style="padding-left:120px;padding-right:120px;">
+    <div class="row" >            
+      <h1 style="font-family:osb;color:black;display:inline-block;">My Memories</h1>
+      <hr style="border-top: 1px solid;color:#ebebeb;margin: 0px;">
+      </br>
+      </br>
+              
+    </div>
+
+    <div class="row" style="border: 1px solid #ebebeb;padding-left: 20px;padding-right: 20px;"> 
+      <div class="col-md-4">           
+        <h2 style="font-family:osb;color:#b03441;display:inline-block;">My Trip title</h2>
+    
+        <img src="<%= asset_path('airbios_img1.png') %>">
+        <div class="row" style="margin-top: 15px;">
+          <!-- Slider Image here -->
+          <div class="col-md-1" style="color: #6C7688;font-size: 20px;font-weight: bold;text-align: center;top: 32px;left: 10px;">&lt;</div>
+          <div class="col-md-3"><img src="<%= asset_path('airbios_img2.png') %>" style=""></div>
+          <div class="col-md-3"><img src="<%= asset_path('airbios_img3.png') %>" style=""></div>
+          <div class="col-md-3"><img src="<%= asset_path('airbios_img4.png') %>" style=""></div>
+          <div class="col-md-1" style="color: #6C7688;font-size: 20px;font-weight: bold;text-align: center;top: 32px;left: 10px;">&gt;</div>
+
+        </div>       
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          </br>
+          <div class="col-md-6">
+            <h4 class="article_head" >FROM <span style="color:#b03441;"> 08/15/15 </span > TO <span style="color:#b03441;"> 08/16/15</span></h4>
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-default choosefile" style="background-color:#6C7688;float: right;color: white;width: 200px;font-weight: 700;">Details</button>
+          </div>
+        </div>
+        <hr style="border-top: 1px solid;color:#ebebeb;">
+        <div class="row">
+          <div class="col-md-2">
+            <h4 class="article_head" >DATE:</h4>
+          </div>
+          <div class="col-md-10" style="padding-left:10px">
+            <h5 class="article_head" style="color:#b03441;margin-top: 12px;">AUGUST, 15 SATURDAY</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <h4 class="article_head" >VISITED:</h4>
+          </div>
+          <div class="col-md-10" style="padding-left: 0px;">
+            <div style="padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;background-color: rgba(114, 114, 114, 0.1);margin-top: 5px;font-size: 18px;color: #A5A89F;font-weight: 100;">
+              <span>Arrowood Vineyards & Winery</span>
+              <span style="float:right;">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </span>
+            </div>
+            <div style="padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;background-color: rgba(114, 114, 114, 0.2);margin-top: 5px;font-size: 18px;color: #A5A89F;font-weight: 100;">
+              <span>Arrowood Vineyards & Winery</span>
+              <span style="float:right;">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </span>
+            </div>
+            <div style="padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;background-color: rgba(114, 114, 114, 0.1);margin-top: 5px;font-size: 18px;color: #A5A89F;font-weight: 100;">
+              <span>Arrowood Vineyards & Winery</span>
+              <span style="float:right;">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </span>
+            </div>          
+          </div>
+
+        </div>
+        <hr style="border-top: 1px solid;color:#ebebeb;">
+        <div class="row">
+          <div class="col-md-2">
+            <h4 class="article_head" >DATE:</h4>
+          </div>
+          <div class="col-md-10" style="padding-left:10px">
+            <h5 class="article_head" style="color:#b03441;margin-top: 12px;">AUGUST, 15 SATURDAY</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <h4 class="article_head" >VISITED:</h4>
+          </div>
+          <div class="col-md-10" style="padding-left: 0px;">
+            <div style="padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;background-color: rgba(114, 114, 114, 0.1);margin-top: 5px;font-size: 18px;color: #A5A89F;font-weight: 100;">
+              <span>Arrowood Vineyards & Winery</span>
+              <span style="float:right;">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </span>
+            </div>
+            <div style="padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;background-color: rgba(114, 114, 114, 0.2);margin-top: 5px;font-size: 18px;color: #A5A89F;font-weight: 100;">
+              <span>Arrowood Vineyards & Winery</span>
+              <span style="float:right;">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </span>
+            </div>
+            <div style="padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;background-color: rgba(114, 114, 114, 0.1);margin-top: 5px;font-size: 18px;color: #A5A89F;font-weight: 100;">
+              <span>Arrowood Vineyards & Winery</span>
+              <span style="float:right;">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </span>
+            </div>          
+          </div>
+
+        </div>
+        <hr style="border-top: 1px solid;color:#ebebeb;">
+      </div> 
+      <div class="col-md-12">
+        <h2 style="font-family:osbi;color:#b03441;display:inline-block;"><i class="fa fa-check-circle" style="font-size: 34px;margin-right: 10px;"></i>Completed</h2>
+        <button type="button" class="btn btn-default choosefile" style="background-color:#6C7688;float: right;color: white;width: 200px;font-weight: 700;margin-top: 20px;"><i class="fa fa-share" style="margin-right: 10px;"></i>Share Trip</button>
+
+      </div>    
+    </div>
+    </br>
+    </br>
+
+    <div class="row" style="border: 1px solid #ebebeb;padding-left: 20px;padding-right: 20px;"> 
+      <div class="col-md-4">           
+        <h2 style="font-family:osb;color:#b03441;display:inline-block;">My Trip title</h2>
+    
+        <img src="<%= asset_path('airbios_img1.png') %>">
+        <div class="row" style="margin-top: 15px;">
+          <!-- Slider Image here -->
+          <div class="col-md-1" style="color: #6C7688;font-size: 20px;font-weight: bold;text-align: center;top: 32px;left: 10px;">&lt;</div>
+          <div class="col-md-3"><img src="<%= asset_path('airbios_img2.png') %>" style=""></div>
+          <div class="col-md-3"><img src="<%= asset_path('airbios_img3.png') %>" style=""></div>
+          <div class="col-md-3"><img src="<%= asset_path('airbios_img4.png') %>" style=""></div>
+          <div class="col-md-1" style="color: #6C7688;font-size: 20px;font-weight: bold;text-align: center;top: 32px;left: 10px;">&gt;</div>
+
+        </div>       
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          </br>
+          <div class="col-md-6">
+            <h4 class="article_head" >FROM <span style="color:#b03441;"> 08/15/15 </span > TO <span style="color:#b03441;"> 08/16/15</span></h4>
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-default choosefile" style="background-color:#6C7688;float: right;color: white;width: 200px;font-weight: 700;">Details</button>
+          </div>
+        </div>
+        <hr style="border-top: 1px solid;color:#ebebeb;">
+        <div class="row">
+          <div class="col-md-2">
+            <h4 class="article_head" >DATE:</h4>
+          </div>
+          <div class="col-md-10" style="padding-left:10px">
+            <h5 class="article_head" style="color:#b03441;margin-top: 12px;">AUGUST, 15 SATURDAY</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <h4 class="article_head" >VISITED:</h4>
+          </div>
+          <div class="col-md-10" style="padding-left: 0px;">
+            <div style="padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;background-color: rgba(114, 114, 114, 0.1);margin-top: 5px;font-size: 18px;color: #A5A89F;font-weight: 100;">
+              <span>Arrowood Vineyards & Winery</span>
+              <span style="float:right;">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </span>
+            </div>
+            <div style="padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;background-color: rgba(114, 114, 114, 0.2);margin-top: 5px;font-size: 18px;color: #A5A89F;font-weight: 100;">
+              <span>Arrowood Vineyards & Winery</span>
+              <span style="float:right;">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </span>
+            </div>
+            <div style="padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;background-color: rgba(114, 114, 114, 0.1);margin-top: 5px;font-size: 18px;color: #A5A89F;font-weight: 100;">
+              <span>Arrowood Vineyards & Winery</span>
+              <span style="float:right;">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </span>
+            </div>          
+          </div>
+
+        </div>
+        <hr style="border-top: 1px solid;color:#ebebeb;">
+        <div class="row">
+          <div class="col-md-2">
+            <h4 class="article_head" >DATE:</h4>
+          </div>
+          <div class="col-md-10" style="padding-left:10px">
+            <h5 class="article_head" style="color:#b03441;margin-top: 12px;">AUGUST, 15 SATURDAY</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <h4 class="article_head" >VISITED:</h4>
+          </div>
+          <div class="col-md-10" style="padding-left: 0px;">
+            <div style="padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;background-color: rgba(114, 114, 114, 0.1);margin-top: 5px;font-size: 18px;color: #A5A89F;font-weight: 100;">
+              <span>Arrowood Vineyards & Winery</span>
+              <span style="float:right;">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </span>
+            </div>
+            <div style="padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;background-color: rgba(114, 114, 114, 0.2);margin-top: 5px;font-size: 18px;color: #A5A89F;font-weight: 100;">
+              <span>Arrowood Vineyards & Winery</span>
+              <span style="float:right;">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </span>
+            </div>
+            <div style="padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;background-color: rgba(114, 114, 114, 0.1);margin-top: 5px;font-size: 18px;color: #A5A89F;font-weight: 100;">
+              <span>Arrowood Vineyards & Winery</span>
+              <span style="float:right;">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </span>
+            </div>          
+          </div>
+
+        </div>
+        <hr style="border-top: 1px solid;color:#ebebeb;">
+      </div> 
+      <div class="col-md-12">
+        <h2 style="font-family:osbi;color:#b03441;display:inline-block;"><i class="fa fa-check-circle" style="font-size: 34px;margin-right: 10px;"></i>Completed</h2>
+        <button type="button" class="btn btn-default choosefile" style="background-color:#6C7688;float: right;color: white;width: 200px;font-weight: 700;margin-top: 20px;"><i class="fa fa-share" style="margin-right: 10px;"></i>Share Trip</button>
+
+      </div>    
+    </div>
+    </br>
+    </br>
+
+    <div class="row" style="border: 1px solid #ebebeb;padding-left: 20px;padding-right: 20px;"> 
+      <div class="col-md-4">           
+        <h2 style="font-family:osb;color:#b03441;display:inline-block;">My Trip title</h2>
+    
+        <img src="<%= asset_path('airbios_img1.png') %>">
+        <div class="row" style="margin-top: 15px;">
+          <!-- Slider Image here -->
+          <div class="col-md-1" style="color: #6C7688;font-size: 20px;font-weight: bold;text-align: center;top: 32px;left: 10px;">&lt;</div>
+          <div class="col-md-3"><img src="<%= asset_path('airbios_img2.png') %>" style=""></div>
+          <div class="col-md-3"><img src="<%= asset_path('airbios_img3.png') %>" style=""></div>
+          <div class="col-md-3"><img src="<%= asset_path('airbios_img4.png') %>" style=""></div>
+          <div class="col-md-1" style="color: #6C7688;font-size: 20px;font-weight: bold;text-align: center;top: 32px;left: 10px;">&gt;</div>
+
+        </div>       
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          </br>
+          <div class="col-md-6">
+            <h4 class="article_head" >FROM <span style="color:#b03441;"> 08/15/15 </span > TO <span style="color:#b03441;"> 08/16/15</span></h4>
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-default choosefile" style="background-color:#6C7688;float: right;color: white;width: 200px;font-weight: 700;">Details</button>
+          </div>
+        </div>
+        <hr style="border-top: 1px solid;color:#ebebeb;">
+        <div class="row">
+          <div class="col-md-2">
+            <h4 class="article_head" >DATE:</h4>
+          </div>
+          <div class="col-md-10" style="padding-left:10px">
+            <h5 class="article_head" style="color:#b03441;margin-top: 12px;">AUGUST, 15 SATURDAY</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <h4 class="article_head" >VISITED:</h4>
+          </div>
+          <div class="col-md-10" style="padding-left: 0px;">
+            <div style="padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;background-color: rgba(114, 114, 114, 0.1);margin-top: 5px;font-size: 18px;color: #A5A89F;font-weight: 100;">
+              <span>Arrowood Vineyards & Winery</span>
+              <span style="float:right;">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </span>
+            </div>
+            <div style="padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;background-color: rgba(114, 114, 114, 0.2);margin-top: 5px;font-size: 18px;color: #A5A89F;font-weight: 100;">
+              <span>Arrowood Vineyards & Winery</span>
+              <span style="float:right;">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </span>
+            </div>
+            <div style="padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;background-color: rgba(114, 114, 114, 0.1);margin-top: 5px;font-size: 18px;color: #A5A89F;font-weight: 100;">
+              <span>Arrowood Vineyards & Winery</span>
+              <span style="float:right;">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </span>
+            </div>          
+          </div>
+
+        </div>
+        <hr style="border-top: 1px solid;color:#ebebeb;">
+        <div class="row">
+          <div class="col-md-2">
+            <h4 class="article_head" >DATE:</h4>
+          </div>
+          <div class="col-md-10" style="padding-left:10px">
+            <h5 class="article_head" style="color:#b03441;margin-top: 12px;">AUGUST, 15 SATURDAY</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <h4 class="article_head" >VISITED:</h4>
+          </div>
+          <div class="col-md-10" style="padding-left: 0px;">
+            <div style="padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;background-color: rgba(114, 114, 114, 0.1);margin-top: 5px;font-size: 18px;color: #A5A89F;font-weight: 100;">
+              <span>Arrowood Vineyards & Winery</span>
+              <span style="float:right;">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </span>
+            </div>
+            <div style="padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;background-color: rgba(114, 114, 114, 0.2);margin-top: 5px;font-size: 18px;color: #A5A89F;font-weight: 100;">
+              <span>Arrowood Vineyards & Winery</span>
+              <span style="float:right;">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </span>
+            </div>
+            <div style="padding-left: 10px;padding-right: 10px;padding-top: 5px;padding-bottom: 5px;background-color: rgba(114, 114, 114, 0.1);margin-top: 5px;font-size: 18px;color: #A5A89F;font-weight: 100;">
+              <span>Arrowood Vineyards & Winery</span>
+              <span style="float:right;">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </span>
+            </div>          
+          </div>
+
+        </div>
+        <hr style="border-top: 1px solid;color:#ebebeb;">
+      </div> 
+      <div class="col-md-12">
+        <h2 style="font-family:osbi;color:#b03441;display:inline-block;"><i class="fa fa-check-circle" style="font-size: 34px;margin-right: 10px;"></i>Completed</h2>
+        <button type="button" class="btn btn-default choosefile" style="background-color:#6C7688;float: right;color: white;width: 200px;font-weight: 700;margin-top: 20px;"><i class="fa fa-share" style="margin-right: 10px;"></i>Share Trip</button>
+
+      </div>    
+    </div>
+    </br>
+    </br>
+
+   
+  </div>
+<style>
+.hdr{
+	box-shadow: 1px 1px 6px;
+}
+</style>
+<%= render 'layouts/footer' %>

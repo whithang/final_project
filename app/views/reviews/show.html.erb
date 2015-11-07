@@ -1,0 +1,519 @@
+<%= render 'layouts/header' %>
+  <div class="wind">
+    <div class="row" style="margin-right:0px;margin-left:0px">
+      <div class="col-md-1 noneedxs noneedsm">
+        &nbsp;
+      </div>
+      <div class="com-xs-12 col-sm-12 col-md-10" style="margin-bottom:25px">
+        <h2 style="color: black; display: inline-block; margin-top: 15px;"><span style="color:#B03441;font-family: osbi;"><%= @winery.name %>'s </span>Reviews</h2>
+        <hr style="border-top: 1px solid;color:#ebebeb;margin: 0px ;">
+        <div class="row"> 
+          <div class="sort_paginate_ajax" style="margin-bottom: 30px;">     
+            <%= render 'wineryreview' %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1 noneedxs noneedsm">
+        &nbsp;
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+</div>
+
+
+<style>
+@media only screen and (min-width: 1401px) {
+  #map-container{
+    height: 520px;
+  }
+}
+
+@media only screen and (min-device-width: 1201px) and (max-width: 1400px){
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    height: 230px !important;
+  }
+  .farrow{
+    margin-top: 3% !important;
+  }
+  #map-container{
+    height: 420px;
+  }
+  
+  
+}
+
+@media only screen and (min-device-width: 992px) and (max-width: 1200px){
+  #map-container{   
+    height:  400px !important;
+  }
+  
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    height: 230px !important;
+  }
+  
+  .topsrch{
+    width: 100px !important;
+  }
+  .farrow{
+    margin-top: 2% !important;
+    padding: 0px !important;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-width: 991px) {
+  #map-container{   
+    height:  400px !important;
+  }
+  .padsm0{
+    padding: 0px;
+    margin-top: 10px;
+  }
+  .mapcnt{
+    padding: 0px !important;
+  }
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    height: 230px !important;
+  }
+  .topsrch{
+    width: 100px !important;
+  }
+  .marlsm{
+    margin-left: 0px !important;
+  }
+  .martsm{
+    margin-top: 15px !important;
+  }
+ 
+}
+
+@media only screen and (max-width: 767px){
+  #map-container{
+    height:  200px !important;
+  }
+  .padsm0{
+    padding: 0px;
+    margin-top: 10px;
+  }
+  .farrow{
+    margin-top: 1% !important;
+    padding: 0px !important;
+  }
+  .marlsm{
+    margin-left: 0px !important;
+  }
+  .martsm{
+    margin-top: 15px !important;
+  }
+  .martxs{
+    margin-top: 10px !important;
+  }
+  .mapcnt{
+    padding: 0px !important;
+  }
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    width: 100% !important;
+    height: 230px !important;
+  }
+  .topsrch{
+    margin-top: 10px;
+    width: 100px !important;
+  }
+  .padxs0{
+    padding: 0px !important;
+  }
+  .fa-heart{
+    right: 15px !important;
+  }
+
+}
+
+.socialicon{
+  font-size: 24px !important;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.noud:hover, .noud:focus {
+    color: #6B7589 !important;
+    text-decoration: none !important;
+}
+.hdr{
+	box-shadow: 1px 1px 6px;
+}
+
+.article_title{
+  color:#B03441;
+  font-family: osr;
+  margin-top: 10px;
+}
+.left_content{
+  padding-left: 100px;
+}
+
+.li_top{
+  padding: 18px 4px 0px 4px;
+}
+
+.signinbtn{
+    background-color:#b03441;
+    color:#ffffff;
+    width:125px;
+    height:40px;
+    font-family:osb;
+    margin-right: 20px;
+    border-radius: 6px;
+  }
+
+  .signinbtn:hover{
+    background-color:#b03441;
+    color:#ffffff;
+  }
+
+  .article_head{
+    font-family: osb;
+    color: #6c7688;
+  }
+
+  .time{
+    width: 105px;
+    height: 35px;
+    text-align: left;
+    padding-top: 2px;
+    padding-left: 4px;
+    border: 2px solid rgb(176, 52, 65);
+    border-radius: 5px;
+    color:  #b03441;
+    font-family: osb;
+    font-size: 18px;
+  }
+
+  .date{
+    width: 105px;
+    height: 35px;
+    text-align: left;
+    padding-top: 2px;
+    color:  #b03441;
+    font-family: osb;
+    font-size: 18px;
+  }
+
+  .article_label{
+    font-family: osr;
+    font-size: 20px;
+    font-weight: normal;
+    color: #b03441;
+  }
+
+  .reservation_btn{
+    background-color: #b03441;
+    color: white;
+    font-family: osb;
+    font-size: 14px;
+    padding: 8px 24px;
+    border-radius: 8px;
+    min-width: 185px;
+    margin-top: 10px;
+  }
+  
+  .reservation_btn:active, .reservation_btn.active, .open > .dropdown-toggle.reservation_btn {
+    color: #FFF;
+    background-color: #B03441 !important;
+    border-color: #B03441 !important;
+  }
+
+  .reservation_btn:focus, .reservation_btn.focus {
+    color: #FFF;
+    background-color: #B03441 !important;
+    border-color: #B03441 !important;
+  }
+  .reservation_btn:hover{
+    background-color: #b03441 !important;
+    color: #FFFFFF !important;
+  }
+
+  .addr{
+    color: #6B7589;
+    font-size: 15px;
+    font-family: osr;
+    padding-left: 5px;
+  }
+
+  .fa-heart{
+  position: absolute;
+  top: 10px;
+  font-size: 27px;
+  right: 30px;
+  color: #FFF;
+  cursor: pointer;
+}
+.nounl:hover, .nounl:focus {
+    color: #B13441 !important;
+    text-decoration: none !important;
+}
+.text_css{
+  font-size: 15px;
+  font-family: osr;
+  color: #6B7589;
+  line-height: 2;
+  text-align: justify;
+}
+
+.addReview{
+  background-color: rgb(235, 235, 235);
+  border-color: rgb(235, 235, 235);
+  font-family: osb;
+  font-size: 15px;
+  color: rgb(107, 117, 137);
+  width: 100%;
+  border-radius: 0;
+  margin: 15px 0px;
+}
+
+.addReview:hover{
+  background-color: rgb(235, 235, 235);
+  color: rgb(107, 117, 137);
+  border-color: rgb(235, 235, 235);
+}
+
+.addReview.active, .addReview:active, .open > .dropdown-toggle.btn-default {
+    background-image: none;
+    background-color: rgb(235, 235, 235);
+    color: rgb(107, 117, 137);
+    border-color: rgb(235, 235, 235);
+}
+
+.addReview.focus, .addReview:focus, .btn:hover {
+    background-image: none;
+    background-color: rgb(235, 235, 235);
+    color: rgb(107, 117, 137);
+    border-color: rgb(235, 235, 235);
+}
+
+
+
+.choosefile{
+  font-family: osb;
+  font-size: 14px;
+  color: #FFF;
+  background-color: #6C7688;
+  width: 130px;
+  text-align: right;
+  border-radius: 5px;
+  border:0px;
+  position: inherit;
+  z-index: 10;
+}
+
+.choosefile:hover{
+  color: #FFF;
+  background-color: #6C7688;
+}
+
+.submit_btn{
+  font-family: osb;
+  font-size: 18px;
+  color: #fff;
+  background-color: #b03441;
+  border-radius: 8px;
+  padding: 7px 20px;
+}
+
+.submit_btn:hover{
+  color: #fff;
+  background-color: #b03441;
+}
+.rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #B03441;
+    text-shadow:1px 1px #B03441, 2px 2px #B03441, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: #B03441;
+    text-shadow:1px 1px #B03441, 2px 2px #B03441, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #B03441;
+    text-shadow:1px 1px #B03441, 2px 2px #B03441, .1em .1em .2em rgba(0,0,0,.5);
+}
+.submit{
+  background-color: #B03441 !important;
+  border-color: #B03441 !important;
+}
+.submit:hover {
+    background-color: #B03441 !important;
+    color: white !important;
+    border-color: #B03441 !important;
+}
+.error{
+  color:red ;
+}
+.pagination{
+  margin: 0px ;
+}
+.pagination > li > a, .pagination > li > span {
+    padding: 6px 15px;
+    border: 0px !important;
+    color:#6b7589;
+    font-weight: bold;
+}
+.pagination >  a, .pagination >  span , .pagination >  em{
+    padding: 6px 15px;
+    border: 0px !important;
+    color:#6b7589;
+    font-weight: bold;
+}
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background-color: #b03441;
+    border-color: #b03441;
+}
+.pagination >a:focus ,.pagination >a:hover {
+  z-index: 3;
+  color: #23527C;
+  background-color: #EEE;
+  text-decoration: unset !important;
+}
+
+.pagination > .current , .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background-color: #b03441;
+    border-color: #b03441;
+    color: white;
+}
+</style>
+
+
+<%= render 'layouts/footer' %>

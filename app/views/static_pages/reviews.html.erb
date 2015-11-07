@@ -1,0 +1,327 @@
+<%= render 'layouts/header' %>
+<div class="wind">
+    <div class="row" style="margin-right:0px;margin-left:0px;margin-top:50px">
+      <div class="col-md-1 noneedxs noneedsm">
+        &nbsp;
+      </div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 col-md-3">
+            <img src="<%= asset_path('winery.png') %>" style="width: 100%;">
+            <label style="font-family: osb;font-size: 14px;margin: 10px 0px;color: #848c9c;">Thoughts, Likes, Dislikes…<span style="color: #b03441;">*</span></label>
+          </div>
+          <div class="col-xs-12 col-sm-9 col-md-9">
+            <h2 style="font-family:osb;color:black;">Edit My Review for <br/><span style="font-family:osbi;color:#b03441;display: inherit;">Arbios Cellars / Praxis - Locals Tasting Room</span></h2>
+            <p style="color: #afb4be;font-family: osr;font-size: 18px;">Update any fields you want to edit:</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-9 col-sm-10 col-md-10">
+            <div class="form-group">
+                <textarea class="form-control" placeholder="Message" style="min-height: 130px;"></textarea>
+            </div>
+          </div>
+          <div class="col-xs-3 col-sm-2 col-md-2">
+            <div style="background-color: #ebebeb;width: 54px;height: 54px;border-radius:5px">
+              <img src="<%= asset_path('user-icon.png') %>" style="position: relative;top: 11%;left: 13%;">
+
+              <h4 style="font-family:osb;font-size:15px;color:#6b7589;margin-top:20px;margin-left:13px">You</h4>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="row" style="padding-left: 15px;">
+          <h4 style="font-family:osb;font-size:15px;color:#6b7589;">Star Rating<span style="color: #b03441;"> * </span></h4>
+          
+            <span style="color:#6b7589;font-family:osr;font-size: 15px;position: relative;top: 4px;">Bad &nbsp;</span>
+            <span>
+              <img src="<%= asset_path('star1.png') %>">
+              <img src="<%= asset_path('star1.png') %>">
+              <img src="<%= asset_path('star1.png') %>">
+              <img src="<%= asset_path('star1.png') %>">
+              <img src="<%= asset_path('star1.png') %>">
+            </span>
+            <span style="color:#6b7589;font-family:osr;font-size: 15px;position: relative;top: 4px;">&nbsp; Excellent</span>
+          <br><br>
+          <h4 style="color:#6b7589;font-family:osb;font-size: 15px;">My Photographic Memory<span style="font-family: osi;">(jpeg, png, avi, bmp, mp4)</span></h4>
+          <div style="position:relative">
+            <!-- <button type="button" class="btn btn-default choosefile" >Choose file</button> -->
+            <button type="button" class="btn btn-default choosefile">Choose file</button>
+            <input type="file" id="upload" value="Choose file" style="border:0px;color: #9ba1ad;font-family:osi;position: absolute;top: 4px;z-index: -1;left: 46px;">
+            <img src="<%= asset_path('camera-icon.png') %>" style="position: absolute;top: 8px;left: 10px;">
+          </div>
+          <br>
+          <button type="button" class="btn btn-default submit_btn" >Submit Updated Review</button>
+          <br><br>
+        </div>
+      </div>
+      <div class="col-md-1 noneedxs noneedsm">
+        &nbsp;
+      </div>
+    </div>       
+</div>
+</div>
+<style>
+@media only screen and (min-width: 1401px) {
+  #map-container{
+    height: 520px;
+  }
+  .modal-dialog{
+    width: 800px !important;
+  }
+}
+
+@media only screen and (min-device-width: 1201px) and (max-width: 1400px){
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    height: 230px !important;
+  }
+  .farrow{
+    margin-top: 3% !important;
+  }
+  #map-container{
+    height: 420px;
+  }
+  .modal-dialog{
+    width: 750px !important;
+  }
+  
+}
+
+@media only screen and (min-device-width: 992px) and (max-width: 1200px){
+  #map-container{   
+    height:  400px !important;
+  }
+  .modal-dialog{
+    width: 700px !important;
+  }
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    height: 230px !important;
+  }
+  
+  .topsrch{
+    width: 100px !important;
+  }
+  .farrow{
+    margin-top: 2% !important;
+    padding: 0px !important;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-width: 991px) {
+  #map-container{   
+    height:  400px !important;
+  }
+  .padsm0{
+    padding: 0px;
+    margin-top: 10px;
+  }
+  .mapcnt{
+    padding: 0px !important;
+  }
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    height: 230px !important;
+  }
+  .topsrch{
+    width: 100px !important;
+  }
+  .marlsm{
+    margin-left: 0px !important;
+  }
+  .martsm{
+    margin-top: 15px !important;
+  }
+ 
+}
+
+@media only screen and (max-width: 767px){
+  #map-container{
+    height:  200px !important;
+  }
+  .padsm0{
+    padding: 0px;
+    margin-top: 10px;
+  }
+  .farrow{
+    margin-top: 1% !important;
+    padding: 0px !important;
+  }
+  .marlsm{
+    margin-left: 0px !important;
+  }
+  .martsm{
+    margin-top: 15px !important;
+  }
+  .martxs{
+    margin-top: 10px !important;
+  }
+  .mapcnt{
+    padding: 0px !important;
+  }
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    width: 100% !important;
+    height: 230px !important;
+  }
+  .topsrch{
+    margin-top: 10px;
+    width: 100px !important;
+  }
+  .padxs0{
+    padding: 0px !important;
+  }
+  .fa-heart{
+    right: 15px !important;
+  }
+
+}
+.submit_btn{
+    font-family: osb;
+    font-size: 18px;
+    color: #fff;
+    background-color: #b03441;
+    border-radius: 8px;
+    padding: 7px 20px;
+  }
+
+  .submit_btn:hover{
+    color: #fff;
+    background-color: #b03441;
+  }
+.hdr{
+	box-shadow: 1px 1px 6px;
+}
+.choosefile{
+  font-family: osb;
+  font-size: 14px;
+  color: #FFF;
+  background-color: #6C7688;
+  width: 130px;
+  text-align: right;
+  border-radius: 5px;
+  border:0px;
+}
+
+.choosefile:hover{
+  color: #FFF;
+  background-color: #6C7688;
+}
+.choosefile:hover{
+  color: #fff;
+  background-color: #6C7688;
+  border-color: #6C7688 !important;
+}
+.choosefile.active, .choosefile:active{
+  color: #fff !important;
+  background-color: #6C7688 !important;
+  border-color: #6C7688 !!important;
+}
+.choosefile.focus, .choosefile:focus {
+  color: #fff;
+  background-color: #6C7688 !important;
+  border-color: #6C7688 !important;
+}
+</style>
+<script>
+$(document).ready(function() {
+	$(document).on('click','.choosefile',function(){
+	  $('#upload').trigger('click');
+	});
+}); 
+</script>
+<%= render 'layouts/footer' %>

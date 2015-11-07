@@ -1,0 +1,971 @@
+<%= render 'layouts/header' %>
+  <div class="wind">
+    <div class="row" style="margin-right:0px;margin-left:0px">
+      <div class="col-md-1 noneedxs noneedsm">
+        &nbsp;
+      </div>
+      <div class="com-xs-12 col-sm-12 col-md-7">
+        <h2 style="color: black; display: inline-block; margin-top: 15px;"><%= @winery.name %></h2>
+        <div class="row" style="margin-top: 20px;">          
+          <div class="col-xs-12 col-sm-7 col-md-7">
+            <% if @winery_photos and @winery_photos!=[] %>
+              <% @winery_photos.each do |i| %>
+                <img src="<%= asset_path(i) %>" style="width: 100%;height: 350px;">
+                <i class="fa fa-heart"></i>
+              <% end %>
+            <% else %>
+              <img src="<%= asset_path('no-image.jpg') %>" style="width: 100%;height: 350px;">
+            <% end %>
+       
+          </div>
+          <div class="col-xs-12 col-sm-5 col-md-5 martxs">
+            <div style="margin-bottom: 10px;">
+              <% if @avg_rating and @avg_rating > 0 %>
+                <% 5.times do |j| %>
+                  <% if j <= @avg_rating -1 %>
+                    <img src="<%= asset_path('star1.png') %>">
+                  <% end %>
+                <% end %>
+              <% end %>
+            </div>
+            <div class="row">
+              <div class="col-xs-1 col-sm-1 col-md-1" style="padding-right: 0px;vertical-align: bottom;"><img src="<%= asset_path('map-pin-small.png') %>"></div>
+              <div class="col-xs-11 col-md-11 col-md-11 addr"><%= @winery.street %>, <%= @winery.city %>, <%= @winery.state %>, <%= @winery.zip %></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1 col-sm-1 col-md-1" style="padding-right: 0px;vertical-align: bottom;"><img src="<%= asset_path('call.png') %>"></div>
+              <div class="col-xs-11 col-sm-11 col-md-11 addr"><% if @winery.phone %><%= @winery.phone %><% else %>Unavailable<% end %></div>
+            </div>
+            <h5 style="font-family: osb;color: #6b7589;"><% if @winery.open and @winery.close %>Open Daily <%= @winery.open.strftime("%I:%M%p") %> - <%= @winery.close.strftime("%I:%M%p") %><% else %>Unavailable<% end %></h5>
+            
+            <button class="btn btn-default reservation_btn" type="button">Here Now?</button><br/>
+            <% if @winery.appointment_url %>
+              <a href="<%= @winery.appointment_url %>" target="_blank">
+                <button class="btn btn-default reservation_btn" type="button">Book a Reservation</button><br/>
+              </a>
+            <% end %>
+            <button class="btn btn-default reservation_btn" type="button">Add to Memory</button><br/>
+          </div>
+        </div>
+        
+
+      </div>
+      <div class="com-xs-12 col-sm-12 col-md-4 padsm0" style="padding-right:0px">
+        <div class="" id="map-container">
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 25px;margin-right:0px;margin-left:0px">
+      <div class="col-md-1 noneedxs noneedsm">
+        &nbsp;
+      </div>
+      <div class="col-sm-6 col-md-7">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <h4 style="font-family: osb;color: #6b7589;">About the Winery</h4>
+            <hr style="border-top: 1px solid;color:#ebebeb;">
+            <div class="text_css" style="line-height: 1.42857;">
+              <%= @winery.bio %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row"  style="margin-top: 35px;">
+          <div class="col-sm-12 col-md-6">
+            <h4 style="font-family: osb;color: #6b7589;">Contact Information</h4>
+            <hr style="margin-right: -15px;">
+           
+            <span class="text_css">
+              <img src="<%= asset_path('call.png') %>" style="width: 15px;">
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 15px;"><% if @winery.phone %><%= @winery.phone %><% else %>Unavailable<% end %></span>
+            <br/>
+
+            <span class="text_css">
+              <i class="fa fa-envelope " style="width: 20px;"></i>
+            </span>
+            <a href="mailto:<%= @winery.email %>">
+              <span mail_to="@winery.email" class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;"><% if @winery.email %><%= @winery.email %><% else %>Unavailable<% end %></span>
+            </a>
+            <br/>
+
+            <span class="text_css">
+              <i class="fa fa-laptop " style="width: 20px;"></i>
+            </span>
+            <a href="<%= @winery.website %>" target="_blank">
+              <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;"><% if @winery.website %><%= @winery.website %><% else %>Unavailable<% end %></span>
+            </a>
+            <br/>
+
+            <span class="text_css">
+              <i class="fa fa-clock-o " style="width: 20px;"></i>
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;"><% if @winery.open and @winery.close %>Open: <span style="font-family:ossb;color:#b13441">Daily <%= @winery.open.strftime("%I:%M%p") %> - <%= @winery.close.strftime("%I:%M%p") %></span><% else %>Unavailable<% end %></span>
+            <br/>
+            <% if @winery.facebook %>
+              <a href="<%= @winery.facebook %>" class="noud">
+                <span class="text_css socialicon">
+                  <i class="fa fa-facebook-square"></i>
+                </span>
+              </a>
+            <% end %>
+            <% if @winery.twitter %>
+              <a href="<%= @winery.twitter %>" class="noud">
+                <span class="text_css socialicon">
+                  <i class="fa fa-twitter-square"></i>
+                </span>
+              </a>
+            <% end %>
+            <% if @winery.instagram %>
+              <a href="<%= @winery.instagram %>" class="noud">
+                <span class="text_css socialicon" class="noud">
+                  <i class="fa fa-instagram"></i>
+                </span>
+              </a>
+            <% end %>
+            <% if @winery.pinterest %>
+              <a href="<%= @winery.pinterest %>" class="noud">
+                <span class="text_css socialicon">
+                  <i class="fa fa-pinterest-square"></i>
+                </span>
+              </a>
+            <% end %>
+
+          </div>
+
+          <div class="col-sm-12 col-md-6">
+            <h4 class="martsm" style="font-family: osb;color: #6b7589;">Good to Know</h4>
+            <hr class="marlsm" style="margin-left: -15px;">
+
+            <span class="text_css">
+              <i class="fa fa-money " style="width: 20px;"></i>
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;">Tasting room fee: <span style="font-family:ossb;color:#b13441"><% if @winery.fee %>$<%= (@winery.fee).to_i %><% else %>$0<% end %></span></span>
+            <br/>
+
+            <span class="text_css">
+              <i class="fa fa-paw " style="width: 20px;"></i>
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;">Pets Allowed: <span style="font-family:ossb;color:#b13441"><% if @winery.pets %>Yes<% else %>No<% end %></span></span>
+            <br/>
+
+            <span class="text_css">
+              <img src="<%= asset_path('basket.png') %>" style="width: 20px;">
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;">Picnic Area: <span style="font-family:ossb;color:#b13441"><% if @winery.picnic %>Yes<% else %>No<% end %></span></span>
+            <br/>
+
+            <span class="text_css">
+              <img src="<%= asset_path('food.png') %>" style="width: 20px;">
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;">Food Served: <span style="font-family:ossb;color:#b13441"><% if @winery.food %>Yes<% else %>No<% end %></span></span>
+            <br/>
+
+            <span class="text_css">
+              <img src="<%= asset_path('family.png') %>" style="width: 20px;">
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;">Kid/Family Friendly: <span style="font-family:ossb;color:#b13441"><% if @winery.family %>Yes<% else %>No<% end %></span></span>
+            <br/>
+
+            <span class="text_css">
+              <i class="fa fa-car " style="width: 20px;"></i>
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;">Tours Available: <span style="font-family:ossb;color:#b13441"><% if @winery.tour %>Yes<% else %>No<% end %></span></span>
+            <br/>
+
+            <span class="text_css">
+              <img src="<%= asset_path('glass.png') %>" style="width: 15px;">
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 15px;">Atmosphere: <span style="font-family:ossb;color:#b13441"><% if @winery.atmosphere %><%= @winery.atmosphere.name %><% else %>Unavailable<% end %></span></span>
+            <br/>
+          </div>
+        </div>
+
+        <div class="row"  style="margin-top: 35px;">
+          <div class="col-md-6">
+            <h4 style="font-family: osb;color: #6b7589;">Wine Varietals</h4>
+            <hr style="margin-right: -15px;">
+            <% for a in @winery.varietals.all %>
+              <div class="text_css"><%= a.name %></div>
+            <% end %>
+          </div>
+          <div class="col-md-6">
+            <!-- <h4 class="martsm" style="font-family: osb;color: #6b7589;">Price Range of Wine</h4>
+            <hr class="marlsm" style="margin-left: -15px;">
+            <div class="text_css">$22.99 - $299.00</div> -->
+
+          </div>
+        </div>
+
+     <!--    <div class="row"  style="margin: 35px -15px;margin-top: 36px;">
+          <div class="col-md-6">
+            <h4 class="martsm" style="font-family: osb;color: #6b7589;">Available Tours</h4>
+            <hr class="marlsm" style="margin-right: -15px;">
+            <div class="text_css">Lorem ipsum dolor sit amet.</div>
+            <div class="text_css">Donec sed eros ac erat posuere tincidunt.</div>
+            <div class="text_css">Vestibulum porta enim ac turpis fermentum.</div>
+          </div>
+          <div class="col-md-6">
+            <h4 class="martsm" style="font-family: osb;color: #6b7589;">Special Events Coming Up</h4>
+            <hr class="marlsm" style="margin-left: -15px;">
+            <div class="text_css"><span style="color:#b13441">June 22</span> Tahoe City Wine Walk</div>
+            <div class="text_css"><span style="color:#b13441">August 17 & 18</span> Tahoe City Wine Family Winemakers of CA Tasting</div>
+            <div class="text_css"><span style="color:#b13441">August 17 & 18 </span> Family Winemakers of CA Tasting</div>
+
+          </div>
+        </div>
+ -->      </div>
+      <div class="col-sm-6 col-md-3">
+        <% if @current_user.present? %>
+          <div class="row" >
+            <div class="col-sm-12 col-md-12">
+              <h4 style="font-family: osb;color: #6b7589;">Your Reviews</h4>
+              <hr style="border-top: 1px solid;color:#ebebeb;">
+              <% if @user_review and @user_review!=[] %>
+                <% @user_review.each do |i| %>
+                  <div class="row">
+                    <div class="col-xs-7 col-sm-7 col-md-7">
+                      <% 5.times do |j| %>
+                        <% if j <= i.rating-1 %>
+                          <img src="<%= asset_path('star1.png') %>">
+                        <% end %>
+                      <% end %>
+                    </div>
+                    <div class="col-xs-5 col-sm-5 col-md-5">
+                      <div style="float:right">
+                        <span><img src="<%= asset_path('calender1.png') %>"></span>
+                        <span class="text_css" style="font-size:12px;font-family: osb;"><%= i.created_at.strftime("%b, %d, %Y") %></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="text_css" style="line-height: 1.42857;margin-top: 7px;">
+                    <%= i.comment %>
+                  </div>
+                  <br/>
+                <% end %>
+              <% else %>
+                <p style="text-align: center; color: rgb(107, 117, 137); font-size: 14px;font-family: osr;">You have not reviewed this Winery yet ,Review it now!</p>
+              <% end %>
+              <button class="btn btn-default addReview" type="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil" style="margin-right: 10px;"></i>Add <% if @user_review and @user_review!=[] %>Another<% end %> Review</button>
+              
+            </div>
+          </div>
+        
+        <div class="row">  
+          <div class="col-xs-5 col-sm-5 col-md-5" style="padding-right: 0px;">
+            <h4 style="font-family: osb;color: #6b7589;">Friend's Reviews</h4>
+          </div>
+        </div>  
+        <hr style="margin-top: 13px;">
+        <% if @friends_review and @friends_review!=[] %>
+          <% @friends_review.each do |i| %>
+            <div class="row">
+              <div class="col-xs-7 col-sm-7 col-md-7">
+                <% 5.times do |j| %>
+                  <% if j <= i.rating-1 %>
+                    <img src="<%= asset_path('star1.png') %>">
+                  <% end %>
+                <% end %>           
+              </div>
+              <div class="col-xs-5 col-sm-5 col-md-5">
+                <div style="float:right">
+                  <span><img src="<%= asset_path('calender1.png') %>"></span>
+                  <span class="text_css" style="font-size:12px;font-family: osb;"><%= i.created_at.strftime("%b, %d, %Y") %></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="text_css" style="line-height: 1.42857;margin: 7px 0px;">
+              <%= i.comment %>
+            </div>
+
+            <div class="row" style="margin-top: 10px;">
+              <div class="col-xs-3 col-sm-3 col-md-3">
+                <div style="background-color: #ebebeb;width: 54px;height: 54px;border-radius:5px">
+                  <img src="<%= asset_path(i.user.profile.photo) %>" style="height:50px;width:50px;">
+                </div>
+             </div>
+              <div class="col-xs-9 col-sm-9 col-md-9"> <span class="text_css" style="position: relative;top: 10px;font-family: osb;"><%= i.user.profile.first_name %> <%= i.user.profile.last_name %></span></div>
+            </div>
+            <hr style="margin-top: 13px;">
+          <% end %>
+        <% else %>
+            <p style="text-align: center; color: rgb(107, 117, 137); font-size: 14px;font-family: osr;">None of your friends have review this Winery yet!</p>
+          
+        <% end %>
+      <% end %> 
+      </div>
+      <div class="col-md-1 noneedxs noneedsm">
+        &nbsp;
+      </div>
+    </div>
+    <br/>
+    <div class="row martsm" style="margin-right:0px;margin-left:0px;background-color: #F0F0F0;">
+      <div class="col-md-1 noneedxs noneedsm">
+        &nbsp;
+      </div>
+      <div class="col-sm-12 col-md-10" style="margin-bottom: 25px;">
+        <a href="/reviews/<%= @winery.slug %>/"><h4 style="font-family:osb;color:#6b7589">All Reviews (<%= @all_count %>)</h4>
+        </a>
+        <div class="row">
+          <% if @all_review %>
+            <% @all_review.each do |i| %>
+              <div class="col-md-6">
+                <div style="border: 1px solid rgba(221, 218, 218, 1); padding: 0px 15px 0px 0px;margin-top: 25px;">
+                  <div class="row" style="margin-top: 10px;margin-bottom: 10px;">
+                    <div class="col-xs-3 col-sm-3 col-md-3" align="center">
+                        <img src="<%= asset_path(i.user.profile.photo) %>" style="height:50px;width:50px;">
+                        <p class="text_css" style="position: relative;top: 10px;font-family: osb;text-align: center;"><%= i.user.profile.first_name %> <%= i.user.profile.last_name %></p>
+                    </div>
+                    
+                    <div class="col-xs-9 col-sm-9 col-md-9"> 
+                    <div class="row">
+                      <div class="col-xs-7 col-sm-7 col-md-7">
+                        <% 5.times do |j| %>
+                          <% if j <= i.rating-1 %>
+                            <img src="<%= asset_path('star1.png') %>">
+                          <% end %>
+                        <% end %>
+                      </div>
+                      <div class="col-xs-5 col-sm-5 col-md-5">
+                        <div style="float:right">
+                          <span><img src="<%= asset_path('calender1.png') %>"></span>
+                          <span class="text_css" style="font-size:12px;font-family: osb;"><%= i.created_at.strftime("%b, %d, %Y") %></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text_css" style="line-height: 1.42857;">
+                      <%= i.comment %>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-md-1 noneedxs noneedsm">
+        &nbsp;
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+</div>
+
+<div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <form id="review_form" method="post" action="/reviews/create/<%= @winery.id %>" enctype='multipart/form-data'>
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel" style="font-family: osb;color: #848C9C;">Review</h4>
+        </div>
+        <div class="modal-body">
+          <div class="wind">
+              <div class="row">
+                <div class="col-md-1 noneedxs noneedsm">
+                  &nbsp;
+                </div>
+                <div class="col-md-10">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                      <% if @winery_photos[0] and @winery_photos[0]!=[] %>
+                        <img src="<%= asset_path(@winery_photos[0]) %>" style="width: 100%;height: 100px;">
+                        <i class="fa fa-heart"></i>                      
+                      <% else %>
+                        <img src="<%= asset_path('no-image.jpg') %>" style="width: 100%;height: 100px;">
+                      <% end %>
+
+                      <label style="font-family: osb;font-size: 14px;margin: 10px 0px;color: #848c9c;">Thoughts, Likes, Dislikes…<span style="color: #b03441;">*</span></label>
+                    </div>
+                    <div class="col-xs-12 col-sm-9 col-md-9">
+                      <h3 style="font-family:osb;color:black;">Add My Review for <br/><span style="font-family:osbi;color:#b03441;display: inherit;"><%= @winery.name %></span></h3>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-9 col-sm-10 col-md-10">
+                      <div class="form-group">
+                          <textarea class="form-control" id="textarea" placeholder="Message" name="comment" maxlength="250" style="min-height: 130px;"></textarea>
+                          <div id="textarea_feedback" style="font-family: osr; color: rgb(107, 117, 137);"></div>
+                      </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-2 col-md-2"> 
+                      <% if @current_user.present? %>         
+                        <img src="<%= @current_user.profile.photo %>" style="width: 50px; height: 50px;">
+                      <% end %>
+                    </div>
+                  </div>
+
+                  
+
+                  <div class="row" style="padding-left: 15px;">
+                    <h4 style="font-family:osb;font-size:15px;color:#6b7589;">Star Rating<span style="color: #b03441;"> * </span></h4>
+                    <fieldset class="rating">
+                      <input type="radio" id="star5" name="rating" value="5" /><label for="star5" >5 stars</label>
+                      <input type="radio" id="star4" name="rating" value="4" /><label for="star4" >4 stars</label>
+                      <input type="radio" id="star3" name="rating" value="3" /><label for="star3" >3 stars</label>
+                      <input type="radio" id="star2" name="rating" value="2" /><label for="star2" >2 stars</label>
+                      <input type="radio" id="star1" name="rating" value="1" /><label for="star1" >1 star</label>
+                    </fieldset> 
+                    <br><br> 
+                    <label for="rating" class="error" style="display:none" id="rating-error">please provide rating for winery.</label>     
+                    
+                    <h4 style="color:#6b7589;font-family:osr;font-size: 15px;">My Photographic Memory<span style="font-family: osi;">(jpeg, png, jpeg)</span></h4>
+                    <div style="position:relative">
+                      <!-- <button type="button" class="btn btn-default choosefile" >Choose file</button> -->
+                      <button type="button" class="btn btn-default choosefile">Choose file</button>
+                      <input type="file" id="upload" value="Choose file" name="photo" style="border:0px;color: #9ba1ad;font-family:osi;position: absolute;top: 4px;left: 42px;">
+                      <img src="<%= asset_path('camera-icon.png') %>" style="position: absolute;top: 8px;left: 10px;z-index: 10;">
+                    </div>
+                    <br>
+                    <br><br>
+                  </div>
+                </div>
+                <div class="col-md-1 noneedxs noneedsm">
+                  &nbsp;
+                </div>
+              </div>
+                   
+
+
+                    
+                  
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary submit" >Submit review</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<style>
+@media only screen and (min-width: 1401px) {
+  #map-container{
+    height: 520px;
+  }
+}
+
+@media only screen and (min-device-width: 1201px) and (max-width: 1400px){
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    height: 230px !important;
+  }
+  .farrow{
+    margin-top: 3% !important;
+  }
+  #map-container{
+    height: 420px;
+  }
+  
+  
+}
+
+@media only screen and (min-device-width: 992px) and (max-width: 1200px){
+  #map-container{   
+    height:  400px !important;
+  }
+  
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    height: 230px !important;
+  }
+  
+  .topsrch{
+    width: 100px !important;
+  }
+  .farrow{
+    margin-top: 2% !important;
+    padding: 0px !important;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-width: 991px) {
+  #map-container{   
+    height:  400px !important;
+  }
+  .padsm0{
+    padding: 0px;
+    margin-top: 10px;
+  }
+  .mapcnt{
+    padding: 0px !important;
+  }
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    height: 230px !important;
+  }
+  .topsrch{
+    width: 100px !important;
+  }
+  .marlsm{
+    margin-left: 0px !important;
+  }
+  .martsm{
+    margin-top: 15px !important;
+  }
+ 
+}
+
+@media only screen and (max-width: 767px){
+  #map-container{
+    height:  200px !important;
+  }
+  .padsm0{
+    padding: 0px;
+    margin-top: 10px;
+  }
+  .farrow{
+    margin-top: 1% !important;
+    padding: 0px !important;
+  }
+  .marlsm{
+    margin-left: 0px !important;
+  }
+  .martsm{
+    margin-top: 15px !important;
+  }
+  .martxs{
+    margin-top: 10px !important;
+  }
+  .mapcnt{
+    padding: 0px !important;
+  }
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    width: 100% !important;
+    height: 230px !important;
+  }
+  .topsrch{
+    margin-top: 10px;
+    width: 100px !important;
+  }
+  .padxs0{
+    padding: 0px !important;
+  }
+  .fa-heart{
+    right: 15px !important;
+  }
+
+}
+
+.socialicon{
+  font-size: 24px !important;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.noud:hover, .noud:focus {
+    color: #6B7589 !important;
+    text-decoration: none !important;
+}
+.hdr{
+	box-shadow: 1px 1px 6px;
+}
+
+
+.left_content{
+  padding-left: 100px;
+}
+
+.li_top{
+  padding: 18px 4px 0px 4px;
+}
+
+.signinbtn{
+    background-color:#b03441;
+    color:#ffffff;
+    width:125px;
+    height:40px;
+    font-family:osb;
+    margin-right: 20px;
+    border-radius: 6px;
+  }
+
+  .signinbtn:hover{
+    background-color:#b03441;
+    color:#ffffff;
+  }
+
+  .article_head{
+    font-family: osb;
+    color: #6c7688;
+  }
+
+  .time{
+    width: 105px;
+    height: 35px;
+    text-align: left;
+    padding-top: 2px;
+    padding-left: 4px;
+    border: 2px solid rgb(176, 52, 65);
+    border-radius: 5px;
+    color:  #b03441;
+    font-family: osb;
+    font-size: 18px;
+  }
+
+  .date{
+    width: 105px;
+    height: 35px;
+    text-align: left;
+    padding-top: 2px;
+    color:  #b03441;
+    font-family: osb;
+    font-size: 18px;
+  }
+
+  .article_label{
+    font-family: osr;
+    font-size: 20px;
+    font-weight: normal;
+    color: #b03441;
+  }
+
+  .reservation_btn{
+    background-color: #b03441;
+    color: white;
+    font-family: osb;
+    font-size: 14px;
+    padding: 8px 24px;
+    border-radius: 8px;
+    min-width: 185px;
+    margin-top: 10px;
+  }
+  
+  .reservation_btn:active, .reservation_btn.active, .open > .dropdown-toggle.reservation_btn {
+    color: #FFF;
+    background-color: #B03441 !important;
+    border-color: #B03441 !important;
+  }
+
+  .reservation_btn:focus, .reservation_btn.focus {
+    color: #FFF;
+    background-color: #B03441 !important;
+    border-color: #B03441 !important;
+  }
+  .reservation_btn:hover{
+    background-color: #b03441 !important;
+    color: #FFFFFF !important;
+  }
+
+  .addr{
+    color: #6B7589;
+    font-size: 15px;
+    font-family: osr;
+    padding-left: 5px;
+  }
+
+  .fa-heart{
+  position: absolute;
+  top: 10px;
+  font-size: 27px;
+  right: 30px;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.text_css{
+  font-size: 15px;
+  font-family: osr;
+  color: #6B7589;
+  line-height: 2;
+  text-align: justify;
+}
+
+.addReview{
+  background-color: rgb(235, 235, 235);
+  border-color: rgb(235, 235, 235);
+  font-family: osb;
+  font-size: 15px;
+  color: rgb(107, 117, 137);
+  width: 100%;
+  border-radius: 0;
+  margin: 15px 0px;
+}
+
+.addReview:hover{
+  background-color: rgb(235, 235, 235);
+  color: rgb(107, 117, 137);
+  border-color: rgb(235, 235, 235);
+}
+
+.addReview.active, .addReview:active, .open > .dropdown-toggle.btn-default {
+    background-image: none;
+    background-color: rgb(235, 235, 235);
+    color: rgb(107, 117, 137);
+    border-color: rgb(235, 235, 235);
+}
+
+.addReview.focus, .addReview:focus, .btn:hover {
+    background-image: none;
+    background-color: rgb(235, 235, 235);
+    color: rgb(107, 117, 137);
+    border-color: rgb(235, 235, 235);
+}
+
+
+
+.choosefile{
+  font-family: osb;
+  font-size: 14px;
+  color: #FFF;
+  background-color: #6C7688;
+  width: 130px;
+  text-align: right;
+  border-radius: 5px;
+  border:0px;
+  position: inherit;
+  z-index: 10;
+}
+
+.choosefile:hover{
+  color: #FFF;
+  background-color: #6C7688;
+}
+
+.submit_btn{
+  font-family: osb;
+  font-size: 18px;
+  color: #fff;
+  background-color: #b03441;
+  border-radius: 8px;
+  padding: 7px 20px;
+}
+
+.submit_btn:hover{
+  color: #fff;
+  background-color: #b03441;
+}
+.rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #B03441;
+    text-shadow:1px 1px #B03441, 2px 2px #B03441, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: #B03441;
+    text-shadow:1px 1px #B03441, 2px 2px #B03441, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #B03441;
+    text-shadow:1px 1px #B03441, 2px 2px #B03441, .1em .1em .2em rgba(0,0,0,.5);
+}
+.submit{
+  background-color: #B03441 !important;
+  border-color: #B03441 !important;
+}
+.submit:hover {
+    background-color: #B03441 !important;
+    color: white !important;
+    border-color: #B03441 !important;
+}
+.error{
+  color:red ;
+}
+</style>
+
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script> 
+$( document ).ready(function() {
+
+  var text_max = 250;
+  $('#textarea_feedback').html(text_max + ' characters remaining');
+
+  $('#textarea').keyup(function() {
+      var text_length = $('#textarea').val().length;
+      var text_remaining = text_max - text_length;
+
+      $('#textarea_feedback').html(text_remaining + ' characters remaining');
+  });
+
+  $(document).on('click','.choosefile',function(){
+      $('#upload').trigger('click');
+    });
+});
+$('#review_form').validate({
+    rules:
+    {
+      
+      comment: 
+      {
+        required:true
+      },
+      rating: 
+      {
+        required:true
+      },
+     
+    },
+
+    messages:
+    {
+       
+      comment: "Please enter a comment.",
+      rating: "please provide rating for winery."
+      
+    }
+
+});  
+var w_lat = '<%= @winery.lat %>'
+var w_lng = '<%= @winery.lng %>'
+function init_map() {
+  var var_location = new google.maps.LatLng(w_lat,w_lng);
+
+    var var_mapoptions = {
+      center: var_location,
+      zoom: 14
+    };
+
+var var_marker = new google.maps.Marker({
+  position: var_location,
+  map: var_map,
+  icon: new google.maps.MarkerImage("<%= asset_path('wine-map-pin-red.png') %>"),
+  title:"Venice"});
+
+    var var_map = new google.maps.Map(document.getElementById("map-container"),
+        var_mapoptions);
+
+var_marker.setMap(var_map); 
+
+  }
+
+  google.maps.event.addDomListener(window, 'load', init_map);
+
+</script>
+<%= render 'layouts/footer' %>

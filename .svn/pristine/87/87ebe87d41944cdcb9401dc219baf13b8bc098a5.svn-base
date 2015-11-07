@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GLASS ALWAYS  FULL</title>
+  
+  <%= stylesheet_link_tag "application", 'bootstrap.css','bootstrap-slider.css','font-awesome.css', :media => "all" %>
+
+  <%= javascript_include_tag "application" ,'bootstrap.min.js','bootstrap-slider.js','jquery.min.js','jquery.validate.min.js'  %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

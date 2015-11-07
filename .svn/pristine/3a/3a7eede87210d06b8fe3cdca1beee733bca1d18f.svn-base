@@ -1,0 +1,238 @@
+<%= render 'layouts/header' %>
+<div class="wind">
+    <div class="row" style="margin:0px;margin-right: 0px;">
+    	<div class="col-md-12">
+        <div class="row">
+          <div class="col-md-8 left_content">
+            <div class="row">
+              <h1 style="font-family:osb;color:black;display:inline-block;padding-left: 15px;">Harvest Trip</h1>
+              <hr style="border-top: 1px solid;color:#ebebeb;margin: 0px 15px;">
+            </div>
+
+            <div class="row" style="margin-top: 7px;">
+              <div class="col-md-3">
+                <h4 style="font-family: osb;color: #6c7688;text-align: right;">START LOCATION:</h4>
+              </div>
+              <div class="col-md-9">
+                <!-- <div style="border: 1px solid #EBEBEB;position: relative;top: 6px;font-family: osr;font-size: 18px;color: #6c7688;border-radius: 5px;padding: 3px 7px;">Arrowood Vineyards & Winery</div> -->
+                <input type="text" placeholder="Arrowood Vineyards & Winery" style="border: 1px solid #EBEBEB;position: relative;top: 6px;font-family: osr;font-size: 18px;color: #6c7688;border-radius: 5px;padding: 3px 7px;width: 100%;">
+              </div>
+            </div>
+
+            <div class="row" style="margin-top: 7px;">
+              <div class="col-md-3">
+                <h4 style="font-family: osb;color: #6c7688;text-align: right;">END LOCATION:</h4>
+              </div>
+              <div class="col-md-9">
+                <!-- <div style="border: 1px solid #EBEBEB;position: relative;top: 6px;font-family: osr;font-size: 18px;color: #6c7688;border-radius: 5px;padding: 3px 7px;">Arrowood Vineyards & Winery</div> -->
+                <input type="text" placeholder="Arrowood Vineyards & Winery" style="border: 1px solid #EBEBEB;position: relative;top: 6px;font-family: osr;font-size: 18px;color: #6c7688;border-radius: 5px;padding: 3px 7px;width: 100%;">
+              </div>
+            </div>
+
+            <div class="row">
+              
+              <button class="btn btn-danger reservation_btn pull-right" type="submit" style="margin-right: 15px;width: 150px;margin-top:15px;">Submit</button>
+
+            </div>
+
+            <div class="row" style="margin-top: 20px;border: 1px solid #ebebeb;margin-left: 0px;margin-right: 0px;">
+              
+                <div class="col-md-6" style="padding-left: 0px;">
+                  <img src="<%= asset_path('harvest-trip_udpated.png') %>" style="width: 100%;height: 100%;">
+                </div>
+                <div class="col-md-6" style="padding-left: 0px;">
+                  <h4 class="article_head">VISIT:</h4>
+                  <div class="time">11:00am</div>
+                  <label class="article_label">Arrowood Vineyards & Winery</label>
+                  <div>
+                      <img src="<%= asset_path('star1.png') %>">
+                      <img src="<%= asset_path('star1.png') %>">
+                      <img src="<%= asset_path('star1.png') %>">
+                      <img src="<%= asset_path('star1.png') %>">
+                      <img src="<%= asset_path('star1.png') %>">
+                  </div>
+                  <h4 class="article_head">DATE:</h4>
+                  <div class="date">15.08.2015</div>
+                  <label style="font-size: 14px;font-weight: normal;color: #6B7589;font-family: osb;">RESERVATION REQUIRED</label>
+                  <p style="font-size: 14px;color: #6b7589;font-family: osi;">You don’t have reservation for this place</p>
+                  <button class="btn btn-danger reservation_btn" type="button">Book a Reservation</button>
+                </div>
+                
+            </div>
+
+            <div class="row">
+              <div class="col-md-10">
+               &nbsp;
+              </div>
+              <div class="col-md-2">
+                <div class="row">
+                  <div style="padding-top: 30px;">
+                    <span style="float: left;"><img src="<%= asset_path('car.png') %>" style="position: relative;top: 10px;right: 7px;"></span>
+                    <span style="font-family: osb;color: #6c7688;">4min<p style="font-family: osr">1.0 mile</p></span>
+                    <span style="position:relative"><img src="<%= asset_path('divider.png') %>" style="position: absolute;bottom: -21px;height: 101px;left: 96px;"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+             <div class="row">
+              <div style="border: 1px solid #ebebeb;margin: 15px;padding: 8px 36px;font-family: osr;font-size: 15px;color: #6C7688;margin-top: 20px;position:relative">
+                <span style="font-family: osb;font-size: 18px;color:  #6c7688;">LUNCH BREAKS</span>
+
+                <div class="row" >
+                  <div class="input-group input-group search">
+                    <span class="input-group-addon" id="sizing-addon1" style="padding-top: 5px !important;padding-bottom: 6px !important; background:none;border-color: #EBEBEB;">
+                      <img src="<%= asset_path('map-pin.png') %>"/>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Sonoma, CA, US" aria-describedby="sizing-addon1" style="font-family:osi;border-color: #EBEBEB;">
+                  </div>
+
+                  <div class="input-group input-group search" style="margin-left: 35px;">
+                    <span class="input-group-addon" id="sizing-addon1" style="padding-top: 5px !important;padding-bottom: 6px !important; background:none;border: none;font-family: osb;font-size: 18px;color: #6c7688;">
+                      TIME:
+                    </span>
+                    <input type="text" class="form-control" placeholder="01:00pm" aria-describedby="sizing-addon1" style="border-radius: 5px;font-family:osr;width: 110px;font-size:18px;border-color: #EBEBEB;">
+                  </div>
+
+                  <div class="input-group input-group search" style="width:16% !important;float:right;margin-right: 14px;border-color: #EBEBEB;">
+                    <button class="btn btn-danger reservation_btn pull-right" type="submit" style="margin-right: 15px;width: 150px;">Save</button>
+
+                  </div>
+                  <span class="glyphicon glyphicon-remove" style="position: absolute;top: 10px;right: 10px;"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-10">
+               &nbsp;
+              </div>
+              <div class="col-md-2">
+                <div class="row">
+                  <div style="padding-top: 15px;">
+                    <span style="float: left;"><img src="<%= asset_path('car.png') %>" style="position: relative;top: 10px;right: 7px;"></span>
+                    <span style="font-family: osb;color: #6c7688;">4min<p style="font-family: osr">1.0 mile</p></span>
+                    <span style="position:relative"><img src="<%= asset_path('divider.png') %>" style="position: absolute;bottom: -21px;height: 101px;left: 96px;"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" style="border: 1px solid #ebebeb;margin-left: 0px;margin-right: 0px;margin-top: 20px;">
+              
+                <div class="col-md-6" style="padding-left: 0px;">
+                  <img src="<%= asset_path('harvest-trip_udpated.png') %>" style="width: 100%;height: 100%;">
+                </div>
+                <div class="col-md-6" style="padding-left: 0px;">
+                  <h4 class="article_head">VISIT:</h4>
+                  <div class="time">03:00pm</div>
+                  <label class="article_label">Arrowood Vineyards & Winery</label>
+                  <div>
+                      <img src="<%= asset_path('star1.png') %>">
+                      <img src="<%= asset_path('star1.png') %>">
+                      <img src="<%= asset_path('star1.png') %>">
+                      <img src="<%= asset_path('star1.png') %>">
+                      <img src="<%= asset_path('star1.png') %>">
+                  </div>
+                  <h4 class="article_head">DATE:</h4>
+                  <div class="date">15.08.2015</div>
+                  <label style="font-size: 14px;font-weight: normal;color: #6B7589;font-family: osb;">RESERVATION REQUIRED</label>
+                  <p style="font-size: 14px;color: #6b7589;font-family: osi;">You don’t have reservation for this place</p>
+                  <button class="btn btn-danger reservation_btn" type="button">Book a Reservation</button>
+                </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-10"></div>
+              <div class="col-md-2" style="padding-left: 0px;">
+                <div style="padding-top: 28px;">
+                  <span style="float: left;"><img src="<%= asset_path('car.png') %>" style="position: relative;right: 7px;"></span>
+                  <span style="position: relative;bottom: 8px;font-family: osb;color: #6c7688;">4min<p style="font-family: osr">1.0 mile</p></span>
+                  <span style="position:relative"><img src="<%= asset_path('divider.png') %>" style="position: absolute;bottom: 3px;height: 78px;left: 96px;"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" style="border: 1px solid #ebebeb;margin-left: 0px;margin-right: 0px;">
+              
+                <div class="col-md-6" style="padding-left: 0px;">
+                  <img src="<%= asset_path('harvest-trip_udpated.png') %>" style="width: 100%;height: 100%;">
+                </div>
+                <div class="col-md-6" style="padding-left: 0px;">
+                  <h4 class="article_head">VISIT:</h4>
+                  <div class="time">05:00pm</div>
+                  <label class="article_label">Arrowood Vineyards & Winery</label>
+                  <div>
+                      <img src="<%= asset_path('star1.png') %>">
+                      <img src="<%= asset_path('star1.png') %>">
+                      <img src="<%= asset_path('star1.png') %>">
+                      <img src="<%= asset_path('star1.png') %>">
+                      <img src="<%= asset_path('star1.png') %>">
+                  </div>
+                  <h4 class="article_head">DATE:</h4>
+                  <div class="date">15.08.2015</div>
+                  <label style="font-size: 14px;font-weight: normal;color: #6B7589;font-family: osb;">RESERVATION REQUIRED</label>
+                  <p style="font-size: 14px;color: #6b7589;font-family: osi;">You don’t have reservation for this place</p>
+                  <button class="btn btn-danger reservation_btn" type="button">Book a Reservation</button>
+                </div>
+            </div>
+            <div class="row">
+              <button class="btn btn-danger reservation_btn" type="submit" style="margin: 20px 15px;">Add More Wineries</button>
+            </div>
+
+          </div>
+
+          <div class="col-md-4" style="padding-right: 0px;">
+            <div id="map-container">
+
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+.hdr{
+	box-shadow: 1px 1px 6px;
+}
+.reservation_btn{
+	background-color: #B03441;
+	color: #FFF;
+}
+#map-container{
+  height: 1480px;
+}
+</style>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script> 
+$( document ).ready(function() {
+        // $('[data-toggle="tooltip"]').tooltip({'placement': 'top'});
+    }); 
+
+  function init_map() {
+var var_location = new google.maps.LatLng(45.430817,12.331516);
+
+    var var_mapoptions = {
+      center: var_location,
+      zoom: 14
+    };
+
+var var_marker = new google.maps.Marker({
+  position: var_location,
+  map: var_map,
+  icon: new google.maps.MarkerImage("<%= asset_path('wine-map-pin-red.png') %>"),
+  title:"Venice"});
+
+    var var_map = new google.maps.Map(document.getElementById("map-container"),
+        var_mapoptions);
+
+var_marker.setMap(var_map); 
+
+  }
+
+  google.maps.event.addDomListener(window, 'load', init_map);
+
+</script>
+<%= render 'layouts/footer' %>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<%= csrf_meta_tags %>
+<body class="page-header-fixed page-quick-sidebar-over-content page-full-width">
+
+<div class="container-fluid  bgimg">
+  
+  <nav class="navbar navbar-default hdr">
+  <div class="container-fluid">
+    
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a href="/"><img src="<%= asset_path('logo.png') %>" id="logo" /></a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+        <ul class="nav navbar-nav wineries" >
+          <li class="headerbutton">
+            <h5 class="wineriesh5"><a href="/wineries/" style="color:black;">WINERIES</a></h5>
+          </li>
+        </ul>
+        <form method="get" action="/wineries/" class="navbar-form navbar-left bigsearch" role="search" style="border: 0px none;">
+          <!-- <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden"> -->
+          <div class="input-group" style="margin-top: 5px;">
+            <input type="text" class="form-control search-box" placeholder="Search by city ..." aria-describedby="d1" style=" font-family:osi;border-color: #EBEBEB;" name="search_data"/>
+            <span class=" input-group-addon" id="d1"    style="background-color: #ffffff;border-color: #EBEBEB;width:35px"><button  class="glyphicon glyphicon-search form-control-feedback" 
+            style="padding: 0;border: none;background: none;cursor:pointer;pointer-events: all;width:40px"></button></span>
+
+          </div>
+        </form>
+        <!-- <ul class="nav navbar-nav advsearch">
+          <li class="" style="padding-top:5px;">
+            <a href="/advanced_search/" class="advsrch" style="text-decoration:underline;font-family:osr;color: #111;">Advanced Search</a>
+          </li>
+        </ul> -->
+        <ul class="nav navbar-nav dropdown2">
+          <% if @current_user.present? %>
+          <li class="dropdown headerbutton dd">
+            <!-- Single button -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle drpdwn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-family:osb;">
+                 MY STUFF  <span class="glyphicon glyphicon-chevron-down" style="left: 5px;font-size: 11px;"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li style="font-family:osr;"><a class="ddtext" href="/profiles/edit"><img class="ddicon" src="<%= asset_path('profile.png') %>"/>  Profile</a></li>
+                <li role="separator" class="divider"></li>
+                <li style="font-family:osr;"><a class="ddtext" href="/my_memories/"><img class="ddicon" src="<%= asset_path('memory.png') %>"/>  My Memories</a></li>
+                <li role="separator" class="divider"></li>
+                <li style="font-family:osr;"><a class="ddtext" href="/my_reviews/"><img class="ddicon" src="<%= asset_path('review.png') %>"/>  My Reviews</a></li>
+                <li role="separator" class="divider"></li>
+                <li style="font-family:osr;"><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('favorite.png') %>"/>  My Favorites</a></li>
+                <li role="separator" class="divider"></li>
+                <li style="font-family:osr;"><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('reservations.png') %>"/>  My Reservations</a></li>
+                
+              </ul>
+            </div>
+          </li>
+          <% end %>
+          <li class="dropdown headerbutton dd">
+            <!-- Single button -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle drpdwn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-family:osb;">
+               EXTRA STUFF <span class="glyphicon glyphicon-chevron-down" style="left: 5px;font-size: 11px;"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('101.png') %>"/>  101</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('events.png') %>"/>  Events</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('contact.png') %>"/>  Contacts</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('help.png') %>"/>  Help</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+         <ul class="nav navbar-nav dropdown1200" style="display:none">
+          <li class="dropdown clearfix headerbutton dd">
+           
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle drpdwn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-family:osb;">
+                 MENU  <span class="glyphicon glyphicon-chevron-down" style="left: 5px;font-size: 11px;"></span>
+              </button>
+              <ul class="dropdown-menu ">
+               <!--  <li style="font-family:osr;"><a class="ddtext" href="#">Advance Search</a></li>
+                <li role="separator" class="divider"></li> -->
+                <li style="font-family:osr;"><a class="ddtext" href="/wineries/">Wineries</a></li>
+                <li role="separator" class="divider"></li>
+                <% if @current_user.present? %>
+                <li  class="dropdown-submenu" style="font-family:osr;"><a class="ddtext" tabindex="-1">My Stuff</a>       
+                  <ul class="dropdown-menu">
+                    <li style="font-family:osr;"><a class="ddtext" href="/profiles/edit"><img class="ddicon" src="<%= asset_path('profile.png') %>"/>  Profile</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li style="font-family:osr;"><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('memory.png') %>"/>  My Memories</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li style="font-family:osr;"><a class="ddtext" href="/my_reviews/"><img class="ddicon" src="<%= asset_path('review.png') %>"/>  My Reviews</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li style="font-family:osr;"><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('favorite.png') %>"/>  My Favorites</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li style="font-family:osr;"><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('reservations.png') %>"/>  My Reservations</a></li>
+                    
+                  </ul>
+                </li>  
+                <li role="separator" class="divider"></li>
+                <% end %>            
+                
+                <li  class="dropdown-submenu" style="font-family:osr;"><a class="ddtext" tabindex="-1">Extra Stuff</a>       
+                  <ul class="dropdown-menu inside">
+                    <li><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('101.png') %>"/>  101</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('events.png') %>"/>  Events</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('contact.png') %>"/>  Contacts</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('help.png') %>"/>  Help</a></li>
+                  </ul>
+                </li> 
+
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+
+        <ul class="nav navbar-nav navbar-right iconss">
+          <li class="li_top">
+            <button type="button" class="btn btn-default btn-circle"><img src="<%= asset_path('cart.png') %>"/></button>
+          </li>
+          <li class="li_top">
+            <button type="button" class="btn btn-default btn-circle"><img src="<%= asset_path('calender.png') %>"/></button>
+          </li>
+          <% if @current_user.present? %>
+          <li class="top" style="margin-top: 10px; margin-right: 10px;">
+            <ul class="nav navbar-nav">
+              <li class="dropdown headerbutton">
+                <!-- Single button -->
+                <div class="btn-group">
+                   <h4 class="dropdown-toggle username" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 20px;margin-top:0px;margin-bottom: 0px;cursor:pointer">Hi,  <%= @current_user.profile.first_name %>
+                    <span>
+                      <img style="width: 45px; height: 45px; margin-left: 10px; border: 1px solid white;" src="<%= @current_user.profile.photo %>"/>
+                    </span>
+                  </h4>
+                  <ul class="dropdown-menu">
+                    <li><a class="ddtext" href="/logout"><i class="fa fa-power-off" style="margin-right: 15px; font-size: 18px;"></i>logout</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          <% else %>
+          </li>
+          <li class="li_top">
+            <button type="button" class="btn btn-default signinbtn" data-toggle="modal" data-target="#myModal_signin">Sign in</button>
+          </li>
+          <% end %>
+        </ul>
+        
+
+        <div class="navmenu768px" style="display:none">
+          <div class="row" align="center">
+            <form method="get" action="/wineries/" class="navbar-form navbar-left " role="search" style="border: 0px none;">
+              <!-- <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden"> -->
+              <div class="input-group">
+                <input type="text" class="form-control search-box" placeholder="Search by city ..." aria-describedby="d1" style=" font-family:osi;border-color: #EBEBEB;" name="search_data"/>
+                <span class=" input-group-addon" id="d1"    style="background-color: #ffffff;border-color: #EBEBEB;"><button  class="glyphicon glyphicon-search form-control-feedback" 
+                style="padding: 0;border: none;background: none;cursor:pointer;pointer-events: all;width:25px"></button></span>
+
+              </div>
+            </form>
+          </div>
+          <div class="row">
+            <div class="col-xs-6" align="center">
+              <ul class="nav navbar-nav" >
+                <li class="headerbutton">
+                  <h6 class="wineriesh5"><a href="/wineries/" style="color:black;">WINERIES</a></h5>
+                </li>
+              </ul>
+            </div>
+            <!-- <div class="col-xs-6" align="center">
+              <ul class="nav navbar-nav" >
+                <li class="headerbutton">
+                  <h6 class="wineriesh5"><a href="wineries.html" style="color:black;">Advanced Search</a></h5>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+          <div class="row">
+            <div class="col-xs-6" align="center">
+            <ul class="nav navbar-nav">
+            <% if @current_user.present? %>
+            <li class="dropdown headerbutton dd">
+              <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle drpdwn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-family:osb;">
+                   MY STUFF  <span class="glyphicon glyphicon-chevron-down" style="left: 5px;font-size: 11px;"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li style="font-family:osr;"><a class="ddtext" href="/profiles/edit"><img class="ddicon" src="<%= asset_path('profile.png') %>"/>  Profile</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li style="font-family:osr;"><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('memory.png') %>"/>  My Memories</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li style="font-family:osr;"><a class="ddtext" href="/my_reviews/"><img class="ddicon" src="<%= asset_path('review.png') %>"/>  My Reviews</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li style="font-family:osr;"><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('favorite.png') %>"/>  My Favorites</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li style="font-family:osr;"><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('reservations.png') %>"/>  My Reservations</a></li>
+                  <li role="separator" class="divider"></li>
+                 
+                </ul>
+              </div>
+            </li>
+            <% end %>
+            </ul>
+            </div>
+            <div class="col-xs-6" align="center">
+              <ul class="nav navbar-nav ">
+                <li class="dropdown headerbutton dd">
+                  <!-- Single button -->
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle drpdwn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-family:osb;">
+                     EXTRA STUFF <span class="glyphicon glyphicon-chevron-down" style="left: 5px;font-size: 11px;"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('101.png') %>"/>  101</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('events.png') %>"/>  Events</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('contact.png') %>"/>  Contacts</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a class="ddtext" href="#"><img class="ddicon" src="<%= asset_path('help.png') %>"/>  Help</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3" align="center">
+              <button type="button" class="btn btn-default btn-circle"><img src="<%= asset_path('cart.png') %>"/></button>     
+            </div>
+            <div class="col-xs-3" align="center">
+              <button type="button" class="btn btn-default btn-circle"><img src="<%= asset_path('calender.png') %>"/></button>
+            </div>
+            <% if not @current_user.present? %>
+            <div class="col-xs-6" align="center">
+              <button type="button" class="btn btn-default signinbtn" data-toggle="modal" data-target="#myModal_signin">Sign in</button>
+            </div>
+            <% end %>  
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </nav>

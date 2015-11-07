@@ -1,0 +1,184 @@
+-- create_table("atmospheres", {:force=>:cascade})
+   -> 0.1845s
+-- create_table("attribute_categories", {:force=>:cascade})
+   -> 0.1898s
+-- create_table("attribute_sub_categories", {:force=>:cascade})
+   -> 0.1344s
+-- create_table("memories", {:force=>:cascade})
+   -> 0.1690s
+-- add_index("memories", ["user_id"], {:name=>"index_memories_on_user_id"})
+   -> 0.2233s
+-- create_table("memory_details", {:force=>:cascade})
+   -> 0.1567s
+-- add_index("memory_details", ["memory_id"], {:name=>"index_memory_details_on_memory_id"})
+   -> 0.1900s
+-- add_index("memory_details", ["winery_id"], {:name=>"index_memory_details_on_winery_id"})
+   -> 0.1675s
+-- create_table("profiles", {:force=>:cascade})
+   -> 0.1900s
+-- add_index("profiles", ["user_id"], {:name=>"index_profiles_on_user_id"})
+   -> 0.1676s
+-- create_table("reviews", {:force=>:cascade})
+   -> 0.1900s
+-- add_index("reviews", ["user_id"], {:name=>"index_reviews_on_user_id"})
+   -> 0.1567s
+-- add_index("reviews", ["winery_id"], {:name=>"index_reviews_on_winery_id"})
+   -> 0.1695s
+-- create_table("tasting_attributes", {:force=>:cascade})
+   -> 0.1787s
+-- add_index("tasting_attributes", ["attribute_category_id"], {:name=>"index_tasting_attributes_on_attribute_category_id"})
+   -> 0.2011s
+-- add_index("tasting_attributes", ["attribute_sub_category_id"], {:name=>"index_tasting_attributes_on_attribute_sub_category_id"})
+   -> 0.1786s
+-- add_index("tasting_attributes", ["wine_type_id"], {:name=>"index_tasting_attributes_on_wine_type_id"})
+   -> 0.2012s
+-- create_table("tasting_menus", {:force=>:cascade})
+   -> 0.1676s
+-- add_index("tasting_menus", ["wine_id"], {:name=>"index_tasting_menus_on_wine_id"})
+   -> 0.1451s
+-- create_table("tasting_notes", {:force=>:cascade})
+   -> 0.1458s
+-- add_index("tasting_notes", ["user_id"], {:name=>"index_tasting_notes_on_user_id"})
+   -> 0.1452s
+-- add_index("tasting_notes", ["wine_id"], {:name=>"index_tasting_notes_on_wine_id"})
+   -> 0.1582s
+-- create_table("users", {:force=>:cascade})
+   -> 0.2571s
+-- add_index("users", ["email"], {:name=>"index_users_on_email", :unique=>true})
+   -> 0.2122s
+-- add_index("users", ["reset_password_token"], {:name=>"index_users_on_reset_password_token", :unique=>true})
+   -> 0.2345s
+-- create_table("varietals", {:force=>:cascade})
+   -> 0.2010s
+-- add_index("varietals", ["wine_type_id"], {:name=>"index_varietals_on_wine_type_id"})
+   -> 0.1677s
+-- create_table("varietals_wineries", {:id=>false, :force=>:cascade})
+   -> 0.1455s
+-- add_index("varietals_wineries", ["varietal_id", "winery_id"], {:name=>"index_varietals_wineries_on_varietal_id_and_winery_id"})
+   -> 0.1788s
+-- add_index("varietals_wineries", ["winery_id", "varietal_id"], {:name=>"index_varietals_wineries_on_winery_id_and_varietal_id"})
+   -> 0.3124s
+-- create_table("varietals_wines", {:id=>false, :force=>:cascade})
+   -> 0.1913s
+-- add_index("varietals_wines", ["varietal_id", "wine_id"], {:name=>"index_varietals_wines_on_varietal_id_and_wine_id"})
+   -> 0.1788s
+-- add_index("varietals_wines", ["wine_id", "varietal_id"], {:name=>"index_varietals_wines_on_wine_id_and_varietal_id"})
+   -> 0.2346s
+-- create_table("wine_types", {:force=>:cascade})
+   -> 0.1676s
+-- create_table("wineries", {:force=>:cascade})
+   -> 0.1902s
+-- add_index("wineries", ["atmosphere_id"], {:name=>"index_wineries_on_atmosphere_id"})
+   -> 0.1450s
+-- create_table("winery_varietals", {:id=>false, :force=>:cascade})
+   -> 0.2012s
+-- create_table("winery_image", {:force=>:cascade})
+   -> 0.2233s
+-- add_index("winery_image", ["winery_id"], {:name=>"index_winery_image_on_winery_id"})
+   -> 0.1787s
+-- create_table("tour_list", {:force=>:cascade})
+   -> 0.2027s
+-- add_index("tour_list", ["winery_id"], {:name=>"index_tours_list_on_winery_id"})
+   -> 0.1561s
+-- create_table("event_list", {:force=>:cascade})
+   -> 0.1457s
+-- add_index("event_list", ["winery_id"], {:name=>"index_event_lists_on_winery_id"})
+   -> 0.1455s
+-- create_table("wines", {:force=>:cascade})
+   -> 0.1453s
+-- add_index("wines", ["winery_id"], {:name=>"index_wines_on_winery_id"})
+   -> 0.1345s
+-- initialize_schema_migrations_table()
+   -> 0.3132s
+-- create_table("atmospheres", {:force=>:cascade})
+   -> 0.1305s
+-- create_table("attribute_categories", {:force=>:cascade})
+   -> 0.1915s
+-- create_table("attribute_sub_categories", {:force=>:cascade})
+   -> 0.1676s
+-- create_table("memories", {:force=>:cascade})
+   -> 0.1902s
+-- add_index("memories", ["user_id"], {:name=>"index_memories_on_user_id"})
+   -> 0.1676s
+-- create_table("memory_details", {:force=>:cascade})
+   -> 0.2458s
+-- add_index("memory_details", ["memory_id"], {:name=>"index_memory_details_on_memory_id"})
+   -> 0.1676s
+-- add_index("memory_details", ["winery_id"], {:name=>"index_memory_details_on_winery_id"})
+   -> 0.1902s
+-- create_table("profiles", {:force=>:cascade})
+   -> 0.1454s
+-- add_index("profiles", ["user_id"], {:name=>"index_profiles_on_user_id"})
+   -> 0.1805s
+-- create_table("reviews", {:force=>:cascade})
+   -> 0.1901s
+-- add_index("reviews", ["user_id"], {:name=>"index_reviews_on_user_id"})
+   -> 0.1677s
+-- add_index("reviews", ["winery_id"], {:name=>"index_reviews_on_winery_id"})
+   -> 0.1454s
+-- create_table("tasting_attributes", {:force=>:cascade})
+   -> 0.1566s
+-- add_index("tasting_attributes", ["attribute_category_id"], {:name=>"index_tasting_attributes_on_attribute_category_id"})
+   -> 0.1456s
+-- add_index("tasting_attributes", ["attribute_sub_category_id"], {:name=>"index_tasting_attributes_on_attribute_sub_category_id"})
+   -> 0.1451s
+-- add_index("tasting_attributes", ["wine_type_id"], {:name=>"index_tasting_attributes_on_wine_type_id"})
+   -> 0.2234s
+-- create_table("tasting_menus", {:force=>:cascade})
+   -> 0.2121s
+-- add_index("tasting_menus", ["wine_id"], {:name=>"index_tasting_menus_on_wine_id"})
+   -> 0.1472s
+-- create_table("tasting_notes", {:force=>:cascade})
+   -> 0.2232s
+-- add_index("tasting_notes", ["user_id"], {:name=>"index_tasting_notes_on_user_id"})
+   -> 0.2713s
+-- add_index("tasting_notes", ["wine_id"], {:name=>"index_tasting_notes_on_wine_id"})
+   -> 0.2538s
+-- create_table("users", {:force=>:cascade})
+   -> 0.1675s
+-- add_index("users", ["email"], {:name=>"index_users_on_email", :unique=>true})
+   -> 0.2233s
+-- add_index("users", ["reset_password_token"], {:name=>"index_users_on_reset_password_token", :unique=>true})
+   -> 0.1679s
+-- create_table("varietals", {:force=>:cascade})
+   -> 0.2014s
+-- add_index("varietals", ["wine_type_id"], {:name=>"index_varietals_on_wine_type_id"})
+   -> 0.1786s
+-- create_table("varietals_wineries", {:id=>false, :force=>:cascade})
+   -> 0.2026s
+-- add_index("varietals_wineries", ["varietal_id", "winery_id"], {:name=>"index_varietals_wineries_on_varietal_id_and_winery_id"})
+   -> 0.1568s
+-- add_index("varietals_wineries", ["winery_id", "varietal_id"], {:name=>"index_varietals_wineries_on_winery_id_and_varietal_id"})
+   -> 0.1453s
+-- create_table("varietals_wines", {:id=>false, :force=>:cascade})
+   -> 0.1456s
+-- add_index("varietals_wines", ["varietal_id", "wine_id"], {:name=>"index_varietals_wines_on_varietal_id_and_wine_id"})
+   -> 0.1457s
+-- add_index("varietals_wines", ["wine_id", "varietal_id"], {:name=>"index_varietals_wines_on_wine_id_and_varietal_id"})
+   -> 0.1455s
+-- create_table("wine_types", {:force=>:cascade})
+   -> 0.2233s
+-- create_table("wineries", {:force=>:cascade})
+   -> 0.2234s
+-- add_index("wineries", ["atmosphere_id"], {:name=>"index_wineries_on_atmosphere_id"})
+   -> 0.2024s
+-- create_table("winery_varietals", {:id=>false, :force=>:cascade})
+   -> 0.1676s
+-- create_table("winery_image", {:force=>:cascade})
+   -> 0.1678s
+-- add_index("winery_image", ["winery_id"], {:name=>"index_winery_image_on_winery_id"})
+   -> 0.2121s
+-- create_table("tour_list", {:force=>:cascade})
+   -> 0.2012s
+-- add_index("tour_list", ["winery_id"], {:name=>"index_tours_list_on_winery_id"})
+   -> 0.1676s
+-- create_table("event_list", {:force=>:cascade})
+   -> 0.2234s
+-- add_index("event_list", ["winery_id"], {:name=>"index_event_lists_on_winery_id"})
+   -> 0.2235s
+-- create_table("wines", {:force=>:cascade})
+   -> 0.1786s
+-- add_index("wines", ["winery_id"], {:name=>"index_wines_on_winery_id"})
+   -> 0.2235s
+-- initialize_schema_migrations_table()
+   -> 0.4152s

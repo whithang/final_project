@@ -1,0 +1,678 @@
+<%= render 'layouts/header' %>
+<div class="wind">
+  <div class="row" style="margin-right:0px;margin-left:0px">
+    <div class="col-md-1 noneedxs noneedsm">
+      &nbsp;
+    </div>
+    <div class="col-sm-12 com-xs-12 col-md-7">
+      <div class="row">
+        <div class="col-sm-8">
+          <h2 style="color:black;display:inline-block;margin-top:15px" class="wineries_head"></h2>
+        </div>
+        
+      </div>
+      <hr style="border-top: 1px solid;color:#ebebeb;margin: 0px ;">
+      <div class="row" style="margin-top:5px;margin-bottom:5px;">
+        <div class="col-md-12">
+
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=a"<% else %>href="<%= @base_search_url %>?&page=1&letter=a"<% end %>><button type="button" class="btn btn-default searchbuttons letter" style="margin-left: 3px;">A</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=b"<% else %>href="<%= @base_search_url %>?&page=1&letter=b"<% end %>><button type="button" class="btn btn-default searchbuttons letter">B</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=c"<% else %>href="<%= @base_search_url %>?&page=1&letter=c"<% end %>><button type="button" class="btn btn-default searchbuttons letter">C</button></1&letter=a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=d"<% else %>href="<%= @base_search_url %>?&page=1&letter=d"<% end %>><button type="button" class="btn btn-default searchbuttons letter">D</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=e"<% else %>href="<%= @base_search_url %>?&page=1&letter=e"<% end %>><button type="button" class="btn btn-default searchbuttons letter">E</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=f"<% else %>href="<%= @base_search_url %>?&page=1&letter=f"<% end %>><button type="button" class="btn btn-default searchbuttons letter">F</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=g"<% else %>href="<%= @base_search_url %>?&page=1&letter=g"<% end %>><button type="button" class="btn btn-default searchbuttons letter">G</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=h"<% else %>href="<%= @base_search_url %>?&page=1&letter=h"<% end %>><button type="button" class="btn btn-default searchbuttons letter">H</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=i"<% else %>href="<%= @base_search_url %>?&page=1&letter=i"<% end %>><button type="button" class="btn btn-default searchbuttons letter">I</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=j"<% else %>href="<%= @base_search_url %>?&page=1&letter=j"<% end %>><button type="button" class="btn btn-default searchbuttons letter">J</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=k"<% else %>href="<%= @base_search_url %>?&page=1&letter=k"<% end %>><button type="button" class="btn btn-default searchbuttons letter">K</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=l"<% else %>href="<%= @base_search_url %>?&page=1&letter=l"<% end %>><button type="button" class="btn btn-default searchbuttons letter">L</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=m"<% else %>href="<%= @base_search_url %>?&page=1&letter=m"<% end %>><button type="button" class="btn btn-default searchbuttons letter">M</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=n"<% else %>href="<%= @base_search_url %>?&page=1&letter=n"<% end %>><button type="button" class="btn btn-default searchbuttons letter">N</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=o"<% else %>href="<%= @base_search_url %>?&page=1&letter=o"<% end %>><button type="button" class="btn btn-default searchbuttons letter">O</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=p"<% else %>href="<%= @base_search_url %>?&page=1&letter=p"<% end %>><button type="button" class="btn btn-default searchbuttons letter">P</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=q"<% else %>href="<%= @base_search_url %>?&page=1&letter=q"<% end %>><button type="button" class="btn btn-default searchbuttons letter">Q</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=r"<% else %>href="<%= @base_search_url %>?&page=1&letter=r"<% end %>><button type="button" class="btn btn-default searchbuttons letter">R</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=s"<% else %>href="<%= @base_search_url %>?&page=1&letter=s"<% end %>><button type="button" class="btn btn-default searchbuttons letter">S</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=t"<% else %>href="<%= @base_search_url %>?&page=1&letter=t"<% end %>><button type="button" class="btn btn-default searchbuttons letter">T</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=u"<% else %>href="<%= @base_search_url %>?&page=1&letter=u"<% end %>><button type="button" class="btn btn-default searchbuttons letter">U</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=v"<% else %>href="<%= @base_search_url %>?&page=1&letter=v"<% end %>><button type="button" class="btn btn-default searchbuttons letter">V</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=w"<% else %>href="<%= @base_search_url %>?&page=1&letter=w"<% end %>><button type="button" class="btn btn-default searchbuttons letter">W</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=x"<% else %>href="<%= @base_search_url %>?&page=1&letter=x"<% end %>><button type="button" class="btn btn-default searchbuttons letter">X</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=y"<% else %>href="<%= @base_search_url %>?&page=1&letter=y"<% end %>><button type="button" class="btn btn-default searchbuttons letter">Y</button></a>
+          <a data-remote="true" <% if @base_search_url.include? "?" %>href="<%= @base_search_url %>&page=1&letter=z"<% else %>href="<%= @base_search_url %>?&page=1&letter=z"<% end %>><button type="button" class="btn btn-default searchbuttons letter">Z</button></a>     
+        </div>
+      </div>
+      
+      <form method="get" action="/wineries/" role="search" style="border: 0px none;">
+      <input type="hidden" name="filter" value="true">
+      
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <hr style="border-top: 1px solid;color:#ebebeb;margin: 0px ;">
+          <div class="search_content" style="margin-top: 10px;display:none;">
+            <div class="row" style="margin-top:5px">
+              <div class="col-xs-12 col-sm-8 col-md-9" style="margin-top:10px"> 
+                <div class="input-group input-group search" style="padding-bottom:5px;">
+                  <span class="input-group-addon" id="sizing-addon1" style="padding-top: 0px !important;padding-bottom: 0px !important; background:none;border-color: #EBEBEB;">
+                    <img src="/assets/map-pin-66ebb31ec15d1e0d00299f73e64f4004f93fa0436b50f72e10060857ca1ae536.png">
+                  </span>
+                  <input class="form-control" placeholder="Who, what, where, wine…" aria-describedby="sizing-addon1" style="font-family:osi;border-color: #EBEBEB;" name="text_data" type="text" <% if params[:text_data] %>value="<%= params[:text_data] %>"<% end %> >
+                </div>        
+              </div>
+             
+              <div class="col-xs-12 col-sm-4 col-md-3" style="margin-top:10px">         
+                <div class="btn-group" style="float:left;">
+                  <button type="button" style="color:#6B7589;font-family: osr;" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    miles away <span class="glyphicon glyphicon-chevron-down" style="margin-left: 25px;top: 2px;"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>      
+              </div>
+            </div> 
+
+            <div class="row">
+              <div class="" style="padding-left: 15px;">
+                <h4 style="font-family:osb;color:#6b7589;font-size:15px;">Amenities:</h4>
+              </div>
+              <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class="checkbox">
+                  <label style="font-family:osr;color:#6b7589;font-size: 14px;"><input type="checkbox" <% if params[:picnic] %>checked="checked"<% end %> value="picnic" name="picnic">Picnic area</label>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class="checkbox">
+                  <label style="font-family:osr;color:#6b7589;font-size: 14px;"><input type="checkbox" <% if params[:food] %>checked="checked"<% end %> name="food" value="food">Food available</label>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class="checkbox">
+                  <label style="font-family:osr;color:#6b7589;font-size: 14px;"><input type="checkbox" <% if params[:tour] %>checked="checked"<% end %> name="tour" value="tour">Tours</label>
+                </div>      
+              </div>
+          
+            </div>
+
+            <div class="row">
+              <div class="" style="padding-left: 15px;">
+                <h4 style="font-family:osb;color:#6b7589;font-size:15px;">Access:</h4>
+              </div>
+              <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class="checkbox">
+                  <label style="font-family:osr;color:#6b7589;font-size: 14px;"><input type="checkbox" <% if params[:public] %>checked="checked"<% end %> name="public" value="public">Open to the public</label>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class="checkbox">
+                  <label style="font-family:osr;color:#6b7589;font-size: 14px;"><input type="checkbox" <% if params[:appointment] %>checked="checked"<% end %> name="appointment" value="appointment">Appointment only</label>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class="checkbox">
+                  <label style="font-family:osr;color:#6b7589;font-size: 14px;"><input type="checkbox" <% if params[:open_now] %>checked="checked"<% end %> name="open_now" value="open_now">Open now</label>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class="checkbox">
+                  <label style="font-family:osr;color:#6b7589;font-size: 14px;"><input type="checkbox" <% if params[:adults] %>checked="checked"<% end %> name="adults" value="adults">Adults Only</label>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class="checkbox">
+                  <label style="font-family:osr;color:#6b7589;font-size: 14px;"><input type="checkbox" <% if params[:family] %>checked="checked"<% end %> name="family" value="family">Family Friendly</label>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class="checkbox">
+                  <label style="font-family:osr;color:#6b7589;font-size: 14px;"><input type="checkbox" <% if params[:pets] %>checked="checked"<% end %> name="pets" value="pets">Pets allowed</label>
+                </div>
+              </div>
+              
+          
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <h5 style="font-family:osb;color:#6b7589;">Min/max price per tasting:</h5>
+                <input id="ex2" type="text" class="span2" value="" data-slider-min="0" data-slider-max="<%= @max_fee %>" data-slider-step="5" <% if params[:tasting_price_range] %> data-slider-value="[<%= params[:tasting_price_range] %>]" <% else %> data-slider-value="[10,25]" <% end %>style="width:100%" name="tasting_price_range" />
+                <label style="font-family:osr;color:#6b7589;float:left;margin-top:5px;">Free</label>
+                <label style="font-family:osr;color:#6b7589;float:right;margin-top:5px;">$<%= @max_fee.to_i %></label>
+
+              </div>
+            </div>
+
+            <div class="row" style="margin-top: 5px;">
+              <div class="" style="padding-left: 15px;">
+                <h4 style="font-family:osb;color:#6b7589;font-size:15px;">Wine Varietals:</h4>
+              </div>
+              
+              <div class="col-xs-6 col-sm-3 col-md-3">
+                <div class="checkbox">
+                  <label style="font-family:osr;color:#6b7589;font-weight: 600;"><input class="red_wine" type="checkbox" <% if params[:Red] %>checked="checked"<% end %> name="Red" value="Red">Red</label>
+                </div>
+              
+                <div class="show_redwinecat" style="display:none">
+                  <% @varietals_red.each do |i| %>              
+                    <div class="checkbox">
+                      <label style="font-family:osr;color:#6b7589;font-size: 14px;"><input type="checkbox" <% if params[(i.name).tr(" ","_")] %>checked="checked"<% end %> name="<%= (i.name).tr(" ","_") %>" value="<%= i.name %>" class="red_cat"><%= i.name %></label>
+                    </div>              
+                  <% end %>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-3 col-md-3 whiterow">
+                <div class="checkbox">
+                  <label style="font-family:osr;color:#6b7589;font-weight: 600;"><input class="white_wine" type="checkbox" <% if params[:White] %>checked="checked"<% end %> name="White" value="White">White</label>
+                </div>
+              
+                <div class="show_whitewinecat" style="display:none">
+                  <% @varietals_white.each do |i| %>  
+                    <div class="checkbox">
+                      <label style="font-family:osr;color:#6b7589;font-size: 14px;"><input type="checkbox" <% if params[(i.name).tr(" ","_")] %>checked="checked"<% end %> name="<%= (i.name).tr(" ","_") %>" value="<%= i.name %>" class="white_cat"><%= i.name %></label>
+                    </div>             
+                  <% end %>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-3 col-md-3">
+                <% @varietals_other.each do |i| %>
+                  <div class="checkbox">
+                    <label style="font-family:osr;color:#6b7589;font-size: 14px;"><input type="checkbox" <% if params[((i.name).tr(" ","_").tr("/",""))] %>checked="checked"<% end %> name="<%= ((i.name).tr(" ","_").tr("/","")) %>" value="<%= i.name %>"><%= i.name %></label>
+                  </div>
+                <% end %> 
+              </div>        
+            </div>
+   
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <hr style="border-top: 1px solid;color:#ebebeb;margin: 0px ;">
+                
+                  <div class="adv_content" style="margin-top: 40px;display:none">
+                    <div class="row">
+                      <div class="col-xs-6 col-sm-4 col-md-4">
+                        <h4 style="font-family:osb;color:#6b7589;font-size:15px;">Atmosphere:</h4>
+                        <% @environment.each do |i| %>                  
+                          <div class="checkbox">
+                            <label style="font-family:osr;color:#6b7589;font-size: 14px;"><input type="checkbox" name="<%= i.name %>" value="<%= i.name %>"><%= i.name %></label>
+                          </div>  
+                        <% end %>
+                      </div>
+                     <div class="col-xs-6 col-sm-4 col-md-4">
+                        <h4 style="font-family:osb;color:#6b7589;font-size:15px;">Number of People in Your Party</h4>
+                        <div class="input-group input-group search" style="width:40% !important;margin:0 !important;">
+                          <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1" style="font-family:osi;border-radius:4px!important;border-color: #EBEBEB;margin-bottom:15px">
+                        </div>
+
+                        <h4 style="font-family:osb;color:#6b7589;font-size:15px;">Architecture:</h4> 
+                        <div class="checkbox">
+                          <label style="font-family:osr;color:#6b7589;font-size: 14px;"><input type="checkbox" name="historic" value="historic">Historic</label>
+                        </div>               
+                        <div class="checkbox">
+                          <label style="font-family:osr;color:#6b7589;font-size: 14px;"><input type="checkbox" name="modern" value="modern">Modern</label>
+                        </div>                
+                        <div class="checkbox">
+                          <label style="font-family:osr;color:#6b7589;font-size: 14px;"><input type="checkbox" name="eccentric" value="eccentric">Eccentric</label>
+                        </div>
+
+                     
+                      </div>
+                      <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="row">   
+                          <h4 style="font-family:osb;color:#6b7589;font-size:15px">Star Rating:</h4>
+                            <select class="form-control" name="star_rating" style="color: rgb(107, 117, 137);">
+                              <option value="0" <% if params[:star_rating] == '0' %> selected="selected"<% end %> >Select</option>
+                              <option value="1" <% if params[:star_rating] == '1' %> selected="selected"<% end %> >1 Star</option>
+                              <option value="2" <% if params[:star_rating] == '2' %> selected="selected"<% end %> >2 Star</option>
+                              <option value="3" <% if params[:star_rating] == '3' %> selected="selected"<% end %> >3 Star</option>
+                              <option value="4" <% if params[:star_rating] == '4' %> selected="selected"<% end %> >4 Star</option>
+                              <option value="5" <% if params[:star_rating] == '5' %> selected="selected"<% end %> >5 Star</option>
+                            </select>       
+                        </div>
+                        
+                      </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 30px;margin-bottom: 15px;">
+                       <div class="col-md-12">
+                        <h5 style="font-family:osb;color:#6b7589;">Winery size:</h5>
+                        <input id="ex3" type="text" class="span2" value="" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="[2,3]" style="width:100%"/>
+                        <label style="font-family:osr;color:#6b7589;float:left;margin-top:5px;">Small</label>
+                        <label style="font-family:osr;color:#6b7589;float:right;margin-top:5px;">Grand</label>
+                      </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 15px;margin-bottom: 15px;">
+                       <div class="col-md-12">
+                        <h5 style="font-family:osb;color:#6b7589;">The vibe:</h5>
+                        <input id="ex4" type="text" class="span2" value="" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="[2,3]" style="width:100%" data-slider-tooltip="hide"/>
+                        <label style="font-family:osr;color:#6b7589;float:left;margin-top:5px;width:20%;">Intimate</label>
+                        <label style="font-family:osr;color:#6b7589;float:left;margin-top:5px;width:20%;">Relaxed</label>
+                        <label style="font-family:osr;color:#6b7589;float:left;margin-top:5px;width:20%;">Just Tasting</label>
+                        <label style="font-family:osr;color:#6b7589;float:left;margin-top:5px;width:20%;">Letting Loose</label>
+                        <label style="font-family:osr;color:#6b7589;float:right;margin-top:5px;width:20%;">Party Animal</label>
+                      </div>
+                    </div>
+
+
+                </div>
+                <div class="row" align="right" style="margin-right:0px">
+                  <h4 id="show_adv_search" style="font-family:osb;color:#6b7589;font-size:15px;float:right;cursor:pointer;padding: 5px;">Advanced Search <span class="glyphicon glyphicon-chevron-down" style="left: 5px;font-size: 11px;"></span></h4>
+                </div>
+                <hr style="border-top: 1px solid;color:#ebebeb;margin: 0px ;">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                  <button type="submit" class="btn btn-default" style="background-color:#b03441;color:#ffffff;font-family:osb;width:160px;height:40px;float:right;margin-top: 20px;border-radius: 6px;" >Search</button>
+              </div>
+            </div>
+          </div>
+          <div class="row" align="right" style="margin-right:0px">
+            <h4 id="show_search" style="font-family:osb;color:#6b7589;font-size:15px;float:right;cursor:pointer;padding: 5px;">Search <span class="glyphicon glyphicon-chevron-down" style="left: 5px;font-size: 11px;"></span></h4>
+          </div>
+          <hr style="border-top: 1px solid;color:#ebebeb;margin: 0px ;margin-bottom: 10px ">
+        </div>
+      </div>
+
+      
+      </form>
+      
+      <div class="sort_paginate_ajax" style="margin-bottom: 30px;">     
+        <%= render 'page' %>
+      </div>
+
+
+
+    </div>
+
+    <div class="col-sm-12 com-xs-12 col-md-4 padsm0" style="padding-right:0px">
+      <div id="map-container" >
+      </div>
+    </div>
+  </div>  
+
+</div>
+</div>
+<style>
+
+@media only screen and (min-width: 1401px) {
+  h5{
+    font-size: 15px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h3{
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  #map-container{
+    height:  1600px !important;
+  }
+  .checkbox{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .marbtxs{
+    margin-bottom: 30px !important;
+  }
+  .ht160px{
+    height: 160px;
+  }
+}
+
+@media only screen and (min-device-width: 1201px) and (max-width: 1400px){
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 15px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .checkbox > label{
+    font-size: 15px !important;
+  }
+  #map-container{
+    height:  1600px !important;
+  }
+  h3{
+    font-size: 20px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  h4{
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h3{
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .searchbuttons{
+    padding: 6px 6px !important; 
+  }
+  .checkbox{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .marbtxs{
+    margin-bottom: 30px !important;
+  }
+  .ht160px{
+    height: 160px;
+  }
+}
+
+@media only screen and (min-device-width: 992px) and (max-width: 1200px){
+  h3{
+    font-size: 20px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .open_now{
+    width: 110px !important;
+  }
+  h5{
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+
+  h4{
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .checkbox{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .searchbuttons{
+    padding: 6px 6px !important; 
+  }
+  .marbtxs{
+    margin-bottom: 30px !important;
+  }
+  .ht160px{
+    height: 160px;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-width: 991px) {
+  #map-container{
+    height:  400px !important;
+  }
+  .padsm0{
+    padding: 0px;
+  }
+  .searchbuttons{
+    padding: 6px 7px !important; 
+  }
+  .marbtxs{
+    margin-bottom: 30px !important;
+  }
+  .ht160px{
+    height: 160px;
+  }
+
+}
+
+@media only screen and (max-width: 767px){
+  #map-container{
+    height:  200px !important;
+  }
+ .padsm0{
+    padding: 0px;
+  }
+
+  .fltrxs{
+    float: left !important;
+    margin-bottom: 5px !important;
+    margin-top: 5px !important;
+  }
+  .marbtxs{
+    margin-bottom: 30px !important;
+  }
+}
+
+.left_content{
+  padding-left: 100px;
+}
+.search_btn{
+  background-color: #b03441;
+  width: 140px;
+  height: 39px;
+  color: #fff;
+  font-family: osr;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 7px;
+  margin-top: 10px;
+}
+.search_btn:hover{
+  color: #fff;
+}
+
+.slider-selection{
+  background-image: linear-gradient(to bottom, #B13441 0%, #B13441 100%) !important;
+}
+
+.slider-handle{
+  background-image: linear-gradient(to bottom, #B13441 0%, #B13441 100%) !important;
+}
+.hdr{
+  box-shadow: 1px 1px 6px;
+}
+.reservation_btn{
+  background-color: #B03441;
+  color: #FFF;
+}
+.searchbuttons{
+  border: 0px !important;
+  color: #6B7589;
+}
+.hdr{
+	box-shadow: 1px 1px 6px;
+}
+.slider-selection{
+  background-image: linear-gradient(to bottom, #B13441 0%, #B13441 100%) !important;
+}
+
+.slider-handle{
+  background-image: linear-gradient(to bottom, #B13441 0%, #B13441 100%) !important;
+}
+
+.left_content{
+  padding-left: 100px;
+}
+
+.article_title{
+  color:#B03441;
+  font-family: osr;
+}
+.pagination{
+  margin: 0px ;
+}
+.pagination > li > a, .pagination > li > span {
+    padding: 6px 15px;
+    border: 0px !important;
+    color:#6b7589;
+    font-weight: bold;
+}
+.pagination >  a, .pagination >  span , .pagination >  em{
+    padding: 6px 15px;
+    border: 0px !important;
+    color:#6b7589;
+    font-weight: bold;
+}
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background-color: #b03441;
+    border-color: #b03441;
+}
+.pagination >a:focus ,.pagination >a:hover {
+  z-index: 3;
+  color: #23527C;
+  background-color: #EEE;
+  text-decoration: unset !important;
+}
+
+.pagination > .current , .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background-color: #b03441;
+    border-color: #b03441;
+    color: white;
+}
+
+
+.fa-heart{
+  position: absolute;
+  bottom: 10px;
+  font-size: 27px;
+  right: 30px;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.open_now{
+  background-color: #6C7688;
+  border-radius: 8px;
+  width: 128px;
+  height: 30px;
+  color: rgb(255, 255, 255);
+  font-family: osr;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: relative;
+  top: 3px;
+  border:none;
+}
+
+.recommended_by{
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.tooltip-arrow,
+.recommended_by + .tooltip > .tooltip-inner {
+  background-color: #fff;
+  color: #b2b2b2;
+  border:1px solid #eee;
+  font-size: 16px;
+}
+
+.signinbtn{
+    background-color:#b03441;
+    color:#ffffff;
+    width:125px;
+    height:40px;
+    font-family:osb;
+    margin-right: 20px;
+    border-radius: 6px;
+  }
+
+.signinbtn:hover{
+  background-color:#b03441;
+  color:#ffffff;
+}
+
+.addr{
+  color: #6B7589;
+  font-size: 16px;
+  font-family: osr;
+  padding-left: 5px;
+}
+.martop10{
+  margin-top: 10px;
+}
+.nounl:hover, .nounl:focus {
+  color: #B13441 !important;
+  text-decoration: none !important;
+}
+
+</style>
+<script >
+  
+  var slider = new Slider('#ex2', {
+
+      formatter: function(value) {
+        
+        if ((value.toString()).indexOf(",") > 0) {
+          return '$'+((value.toString()).split(","))[0]+" : "+'$'+((value.toString()).split(","))[1]
+        } 
+        else{
+          return value;
+        }
+      }
+
+  });
+  var slider = new Slider('#ex3', {});
+  // var slider = new Slider('#ex4', {});
+
+  var slider = new Slider('#ex4', {});
+
+$(document).ready(function() {
+  $(document).on('click','#show_adv_search',function(){
+    $( ".adv_content" ).slideToggle( "slow", function() {
+      if ($(".adv_content").is(":visible")){
+        $('#show_adv_search span').removeClass("glyphicon-chevron-down");
+        $('#show_adv_search span').addClass("glyphicon-chevron-up");
+        $('.whiterow').addClass('martop10');      
+      }
+      else{
+        $('#show_adv_search span').addClass("glyphicon-chevron-down");
+        $('#show_adv_search span').removeClass("glyphicon-chevron-up"); 
+        $('.whiterow').removeClass('martop10'); 
+      }
+    });
+    $( ".show_redwinecat" ).slideToggle( "slow", function() {
+
+    });
+    $( ".show_whitewinecat" ).slideToggle( "slow", function() {
+
+    });
+
+  });
+
+  $(document).on('click','#show_search',function(){
+    $( ".search_content" ).slideToggle( "slow", function() {
+      if ($(".search_content").is(":visible")){
+        $('#show_search span').removeClass("glyphicon-chevron-down");
+        $('#show_search span').addClass("glyphicon-chevron-up");
+             
+      }
+      else{
+        $('#show_search span').addClass("glyphicon-chevron-down");
+        $('#show_search span').removeClass("glyphicon-chevron-up"); 
+        
+      }
+    });
+    
+  });
+
+  $(".red_wine").change(function() {
+    if(this.checked) {
+      $('.red_cat').prop('checked', true);
+    }
+    else{
+      $('.red_cat').prop('checked', false);
+    }
+  });
+
+  $(".white_wine").change(function() {
+    if(this.checked) {
+      $('.white_cat').prop('checked', true);
+    }
+    else{
+      $('.white_cat').prop('checked', false);
+    }
+  });
+      
+});
+</script>
+
+<%= render 'layouts/footer' %>

@@ -1,0 +1,394 @@
+<%= render 'layouts/header' %>
+<div class="wind">
+    <div class="row" style="margin-right:0px;margin-left:0px;">
+      <div class="col-md-1 noneedxs noneedsm">
+        &nbsp;
+      </div>
+      <div class="col-sm-12 col-md-10">
+        <h2 style="color: black; display: inline-block; margin-top: 15px;">My Profile</h2>
+        <hr style="border-top: 1px solid;color:#ebebeb;margin: 0px ;">
+        <img style="border: 1px solid white; height: 50px; width: 50px; margin-top: 20px; margin-bottom: 20px;" src="<%= @current_user.profile.photo %>"/>
+        <form id="user_form" method="post" action="/profiles/update">
+          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          
+          <br/>
+          <div class="row" style="margin-bottom: 10px;">
+            <div class="col-md-2">
+              <span class="text_css">
+                <i class="fa fa-user" style="width: 20px;font-size:22px"></i>
+              </span>
+              <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;font-size:22px">Name :</span>
+            </div>
+            <div class="col-md-6">
+              <span class="text_css" style="font-family: ossb; color: rgb(177, 52, 65);font-size:22px"><%= @current_user.profile.first_name %>  <%= @current_user.profile.last_name %></span>
+            </div>
+            <br/>
+          </div>
+
+          <div class="row" style="margin-bottom: 10px;">
+            <div class="col-md-2">
+              <span class="text_css">
+                <i class="fa fa-envelope" style="width: 20px;font-size:22px"></i>
+              </span>
+              <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;font-size:22px">Email :</span>
+            </div>
+            <div class="col-md-6">
+              <span class="text_css" style="font-family: ossb; color: rgb(177, 52, 65);font-size:22px"><%= @current_user.email %></span>
+            </div>
+            <br/>
+          </div>
+
+          <div class="row" style="margin-bottom: 10px;">
+            <div class="col-md-2">
+              <span class="text_css">
+                <i class="fa fa-calendar" style="width: 20px;font-size:22px"></i>
+              </span>
+              <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;font-size:22px">Birthdate : </span>
+            </div>
+            <div class="col-md-6">
+              <input style="background-color: transparent; color: rgb(177, 52, 65); font-size: 22px; font-family: ossb;height: 40px;" type="text" name="birth_date" class="form-control datepicker" data-date-format="dd/mm/yyyy" <% if @current_user.profile.birth_date %>value="<%= @current_user.profile.birth_date.strftime("%d/%m/%Y") %>"<% end %> >
+            </div>
+            <br/>
+          </div>
+
+          <div class="row" style="margin-bottom: 10px;">
+            <div class="col-md-2">
+              <span class="text_css">
+                <i class="fa fa-map-marker" style="width: 20px;font-size:22px"></i>
+              </span>
+              <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;font-size:22px">Address : </span>
+            </div>
+            <div class="col-md-6">
+              <input style="background-color: transparent; color: rgb(177, 52, 65); font-size: 22px; font-family: ossb;margin-bottom: 10px;height: 40px;" type="text" name="street" class="form-control" placeholder="street" value="<%= @current_user.profile.street %>">
+              <input style="background-color: transparent; color: rgb(177, 52, 65); font-size: 22px; font-family: ossb;margin-bottom: 10px;height: 40px;" type="text" name="city" class="form-control" placeholder="city" value="<%= @current_user.profile.city %>">
+              <input style="background-color: transparent; color: rgb(177, 52, 65); font-size: 22px; font-family: ossb;margin-bottom: 10px;height: 40px;" type="text" name="state" class="form-control" placeholder="state" value="<%= @current_user.profile.state %>">
+              <input style="background-color: transparent; color: rgb(177, 52, 65); font-size: 22px; font-family: ossb;margin-bottom: 10px;height: 40px;" type="text" name="zip" class="form-control" placeholder="zip" value="<%= @current_user.profile.zip %>">
+            </div>
+            <br/>
+          </div>
+
+          <div class="row" style="margin-bottom: 10px;">
+            <div class="col-md-2">
+              <span class="text_css">
+                <i class="fa fa-info" style="width: 20px;font-size:22px"></i>
+              </span>
+              <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;font-size:22px">About : </span>
+            </div>
+            <div class="col-md-6">
+              
+              <textarea class="form-control" style="width: 100%;background-color: transparent; color: rgb(177, 52, 65); font-size: 22px; font-family: ossb;" rows="4" id="comment" name="bio" value="<%= @current_user.profile.bio %>"><%= @current_user.profile.bio %></textarea>
+
+              <button class="btn btn-default reservation_btn pull-right srchb" type="submit" style="width: 150px; margin-bottom: 20px; background-color: rgb(175, 32, 65); color: white; margin-top: 20px;">Submit</button>
+            </div>
+            <br/>
+
+        </div>
+
+      </form>
+      </div>
+      <div class="col-md-1 noneedxs noneedsm">
+        &nbsp;
+      </div>
+    </div>       
+</div>
+</div>
+<style>
+@media only screen and (min-width: 1401px) {
+  #map-container{
+    height: 520px;
+  }
+  .modal-dialog{
+    width: 800px !important;
+  }
+}
+
+@media only screen and (min-device-width: 1201px) and (max-width: 1400px){
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    height: 230px !important;
+  }
+  .farrow{
+    margin-top: 3% !important;
+  }
+  #map-container{
+    height: 420px;
+  }
+  .modal-dialog{
+    width: 750px !important;
+  }
+  
+}
+
+@media only screen and (min-device-width: 992px) and (max-width: 1200px){
+  #map-container{   
+    height:  400px !important;
+  }
+  .modal-dialog{
+    width: 700px !important;
+  }
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    height: 230px !important;
+  }
+  
+  .topsrch{
+    width: 100px !important;
+  }
+  .farrow{
+    margin-top: 2% !important;
+    padding: 0px !important;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-width: 991px) {
+  #map-container{   
+    height:  400px !important;
+  }
+  .padsm0{
+    padding: 0px;
+    margin-top: 10px;
+  }
+  .mapcnt{
+    padding: 0px !important;
+  }
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    height: 230px !important;
+  }
+  .topsrch{
+    width: 100px !important;
+  }
+  .marlsm{
+    margin-left: 0px !important;
+  }
+  .martsm{
+    margin-top: 15px !important;
+  }
+ 
+}
+
+@media only screen and (max-width: 767px){
+  #map-container{
+    height:  200px !important;
+  }
+  .padsm0{
+    padding: 0px;
+    margin-top: 10px;
+  }
+  .farrow{
+    margin-top: 1% !important;
+    padding: 0px !important;
+  }
+  .marlsm{
+    margin-left: 0px !important;
+  }
+  .martsm{
+    margin-top: 15px !important;
+  }
+  .martxs{
+    margin-top: 10px !important;
+  }
+  .mapcnt{
+    padding: 0px !important;
+  }
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    width: 100% !important;
+    height: 230px !important;
+  }
+  .topsrch{
+    margin-top: 10px;
+    width: 100px !important;
+  }
+  .padxs0{
+    padding: 0px !important;
+  }
+  .fa-heart{
+    right: 15px !important;
+  }
+  .text_css{
+    font-size: 16px !important; 
+  }
+
+}
+.submit_btn{
+    font-family: osb;
+    font-size: 18px;
+    color: #fff;
+    background-color: #b03441;
+    border-radius: 8px;
+    padding: 7px 20px;
+  }
+
+  .submit_btn:hover{
+    color: #fff;
+    background-color: #b03441;
+  }
+.hdr{
+	box-shadow: 1px 1px 6px;
+}
+.choosefile{
+  font-family: osb;
+  font-size: 14px;
+  color: #FFF;
+  background-color: #6C7688;
+  width: 130px;
+  text-align: right;
+  border-radius: 5px;
+  border:0px;
+}
+
+.choosefile:hover{
+  color: #FFF;
+  background-color: #6C7688;
+}
+.choosefile:hover{
+  color: #fff;
+  background-color: #6C7688;
+  border-color: #6C7688 !important;
+}
+.choosefile.active, .choosefile:active{
+  color: #fff !important;
+  background-color: #6C7688 !important;
+  border-color: #6C7688 !!important;
+}
+.choosefile.focus, .choosefile:focus {
+  color: #fff;
+  background-color: #6C7688 !important;
+  border-color: #6C7688 !important;
+}
+.error{
+  color:red ;
+}
+#ui-datepicker-div { display: none; }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+
+<script>
+$(document).ready(function() {
+	$(document).on('click','.choosefile',function(){
+	  $('#upload').trigger('click');
+	});
+});
+$.fn.datepicker.defaults.format = "dd/mm/yyyy";
+ $('.datepicker').datepicker({
+      format: 'dd/mm/yyyy'
+      
+  });
+
+ $('#user_form').validate({
+      rules:
+      {
+        
+        zip:
+        {
+          number: true
+        }
+       
+      },
+
+      messages:
+      {
+         
+        zip:{
+          number:"Please enter a valid zip_code."
+        }
+        
+      }
+
+  }); 
+</script>
+<%= render 'layouts/footer' %>

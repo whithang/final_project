@@ -1,0 +1,145 @@
+<%= render 'layouts/header' %>
+
+<div class="wind">
+    <div class="row" style="margin-left: 0px; margin-right: 0px;">
+    	<div class="col-md-12 text-center">
+    		<h1 style="text-transform: uppercase;font-family:oseb;color:black;">Welcome to the Ultimate Wine Country Trip Planner</h1>
+    		<h2 style="font-style: italic;color:#b03441;margin-bottom: 60px;font-family:osbi;">We are here to help you Create Memories</h2>
+			<div class="col-md-4 text-center content">
+				<div class="" style="opacity:1;">
+         		<h3 style="color:white;font-family:osb;">Where do you want to find tasting rooms?</h3>
+	  				<form method="post" action="/wineries/" role="search" style="border: 0px none;">
+              <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+              <div class="input-group input-group-lg search">
+  						<span class="input-group-addon" id="sizing-addon1" style="padding-top: 10px !important;padding-bottom: 6px !important;">
+  							<img src="<%= asset_path('map-pin.png') %>"/>
+  						</span>
+  					  <input type="text" class="form-control search-box" placeholder="Search by City ..." aria-describedby="sizing-addon1" style="font-family:osi" name="search_data">
+  						<span class="input-group-btn" id="sizing-addon2">
+  							<button type="submit" class="btn btn-default " style="background-color:#b03441;color:#ffffff;border: none;">GO</button>
+  						</span>
+  					</div>
+          </form>
+	        <div class="search">
+  					<a href="#" class="text-right" style="text-transform: uppercase;float:right;color:#ffffff;text-decoration:underline; padding-top:10px;font-family:osb;">View All Wineries</a>
+	    		</div>
+	      </div>
+    	</div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="container-fluid" style="background:#eeeded; padding-bottom:50px;">
+  <div class="col-md-12 text-center" style="margin: 70px 0 70px 0">
+    <h1 style="text-transform: uppercase;font-family:oseb;color:black;">How it works</h1>
+    <h2 style="font-style: italic;color:#b03441;font-family:osbi;">We are here to help you Create Memories</h2>
+  </div>
+  <div style="margin:auto;width:87%">
+    <div class="row">
+      <div class="col-md-4 col-sm-12" style="text-align:center;">
+        <img src="<%= asset_path('discover.png') %>"/>
+        <h1 style="font-family:osl;">DISCOVER</h1>
+        <p class="sizexs" style="text-align:justify;padding:0 60px;font-family:osr;">Cum sociis natoq pentibus etgnis disrie kertse derrosa ajerts lerasen monlase dusce lertase merro hesed.Cum sociis natoq pentibus etgnis disrie kertse derrosa ajerts lerasen monlase dusce lertase merro hesed.</p>
+      </div>
+      <div class="col-md-4 col-sm-12" style="text-align:center;">
+        <img src="<%= asset_path('plan.png') %>"/>
+        <h1 style="font-family:osl">PLAN</h1>
+        <p class="sizexs" style="text-align:justify;padding:0 60px;font-family:osr;">Cum sociis natoq pentibus etgnis disrie kertse derrosa ajerts lerasen monlase dusce lertase merro hesed.Cum sociis natoq pentibus etgnis disrie kertse derrosa ajerts lerasen monlase dusce lertase merro hesed.</p>
+      </div>
+      <div class="col-md-4 col-sm-12" style="text-align:center;">
+        <img src="<%= asset_path('bg.png') %>"/>
+        <h1 style="font-family:osl">ENJOY</h1>
+        <p  class="sizexs" style="text-align:justify;padding:0 60px;font-family:osr;">Cum sociis natoq pentibus etgnis disrie kertse derrosa ajerts lerasen monlase dusce lertase merro hesed.Cum sociis natoq pentibus etgnis disrie kertse derrosa ajerts lerasen monlase dusce lertase merro hesed.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid" style="margin-bottom:50px;">
+  <div class="col-md-12 text-center" style="margin: 50px 0 30px 0">
+    <h1 style="text-transform: uppercase;font-family:oseb;color:black;">Explore the Wineries</h1>
+    <h2 style="font-style: italic;color:#b03441;font-family:osbi;">Lorem Ipsum Dolor Sit Amet</h2>
+  </div>
+  <div style="margin:auto;width:88%">
+    <div class="row">
+    <% @winery.each do |t, a| %>
+      
+        <div class="col-md-6">
+          <h1 class="countrylabel <%= a['winery_id'] %>" style="font-family:oseb;"><%= a['name'] %></h1>
+          <img src="<%= asset_path(a['image'])%>" class="country" style="height:400px">
+        </div>
+      
+    <% end %>
+
+    </div>
+  </div>
+</div>
+<style>
+
+@media only screen and (max-width: 767px){
+  .wind{
+    width: 100% !important;
+  }
+  .search{
+    width: 95% !important;
+  }
+  .country {
+    width: 100% !important;
+    height: 150px !important;
+    margin-bottom: 10px;
+    
+  }
+ 
+  .sizexs{
+    padding: 0px 10px !important;
+  }
+  .content{
+    width: 98%!important;
+    margin: auto !important;
+  }
+  .countrylabel {   
+    top: 0% !important;
+    left: 10% !important;
+    font-size: 28px !important;
+  }
+}
+
+
+.hdr{
+  top:-100px;
+  box-shadow: 1px 1px 12px;
+}
+.bgimg{
+  background: url(<%= asset_path('background.png') %>) no-repeat 0 100%;
+  background-size: cover;
+  padding: 100px 0;
+}
+.search{
+  width: 70%;
+  float: none;
+  margin: auto;
+}
+.content{
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px 0 40px 0;
+  border-radius: 10px;
+  width: 100%;
+
+}
+.wind{
+  margin:auto;
+  width:60%;
+}
+.country{
+  width: 100%;
+  margin-bottom: 25px;
+}
+.countrylabel{
+  color: white;
+  background: transparent;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  z-index: 9999;
+}
+</style>
+<%= render 'layouts/footer' %>

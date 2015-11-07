@@ -1,0 +1,25 @@
+class StaticPagesController < ApplicationController
+  def home
+  end
+
+  def harvest_trip
+  end
+
+  def harvest_trip_lunch
+  end
+
+  def advanced_search
+  end
+
+  def my_memories
+  end
+
+  def reviews
+  end
+
+  def wineries
+  end
+
+  def winery
+  end
+end

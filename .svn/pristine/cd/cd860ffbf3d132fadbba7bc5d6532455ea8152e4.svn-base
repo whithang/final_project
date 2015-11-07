@@ -1,0 +1,104 @@
+<%= render 'layouts/header' %>
+<div class="wind">
+    <div class="row" style="margin-top: 40px;margin-right:0px">
+    	<div class="col-md-12">
+        <div class="row">
+          <div class="col-md-12 left_content">
+            <div class="row">
+              <div class="col-md-2">
+                <img src="<%= asset_path('winery.png') %>" style="width: 100%;height:167px">
+                <label style="font-family: osb;font-size: 15px;margin: 10px 0px;color: #848c9c;">Thoughts, Likes, Dislikes…<span style="color: #b03441;">*</span></label>
+              </div>
+              <div class="col-md-10">
+                <h1 style="font-family:osb;color:black;">Edit My Review for <br/><span style="font-family:osbi;color:#b03441;display: inherit;">Arbios Cellars / Praxis - Locals Tasting Room</span></h1>
+                <p style="color: #afb4be;font-family: osr;font-size: 15px;">Update any fields you want to edit:</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-10">
+                <div class="form-group">
+                    <textarea class="form-control" placeholder="Message" style="min-height: 130px;"></textarea>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div style="background-color: #ebebeb;width: 54px;height: 54px;border-radius:5px">
+                  <img src="<%= asset_path('user-icon.png') %>" style="position: relative;top: 11%;left: 13%;">
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="row" style="padding-left: 15px;">
+              <h4 style="font-family:osb;font-size:15px;color:#6b7589;">Star Rating<span style="color: #b03441;"> * </span></h4>
+              
+                <span style="color:#6b7589;font-family:osr;font-size: 15px;position: relative;top: 4px;">Bad &nbsp;</span>
+                <span>
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                </span>
+                <span style="color:#6b7589;font-family:osr;font-size: 15px;position: relative;top: 4px;">&nbsp; Excellent</span>
+              <br><br>
+              <h4 style="color:#6b7589;font-family:osr;font-size: 15px;">My Photographic Memory<span style="font-family: osi;">(jpeg, png, avi, bmp, mp4)</span></h4>
+              <div style="position:relative">
+                <!-- <button type="button" class="btn btn-default choosefile" >Choose file</button> -->
+                <button type="button" class="btn btn-default choosefile">Choose file</button>
+                <input type="file" id="upload" value="Choose file" style="border:0px;color: #9ba1ad;font-family:osi;position: absolute;top: 4px;z-index: -1;left: 46px;">
+                <img src="<%= asset_path('camera-icon.png') %>" style="position: absolute;top: 8px;left: 10px;">
+              </div>
+              <br>
+              <button type="button" class="btn btn-default submit_btn" >Submit Updated Review</button>
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+.hdr{
+	box-shadow: 1px 1px 6px;
+}
+.choosefile{
+  font-family: osb;
+  font-size: 14px;
+  color: #FFF;
+  background-color: #6C7688;
+  width: 130px;
+  text-align: right;
+  border-radius: 5px;
+  border:0px;
+}
+
+.choosefile:hover{
+  color: #FFF;
+  background-color: #6C7688;
+}
+.choosefile:hover{
+  color: #fff;
+  background-color: #6C7688;
+  border-color: #6C7688 !important;
+}
+.choosefile.active, .choosefile:active{
+  color: #fff !important;
+  background-color: #6C7688 !important;
+  border-color: #6C7688 !!important;
+}
+.choosefile.focus, .choosefile:focus {
+  color: #fff;
+  background-color: #6C7688 !important;
+  border-color: #6C7688 !important;
+}
+</style>
+<script>
+$(document).ready(function() {
+	$(document).on('click','.choosefile',function(){
+	  $('#upload').trigger('click');
+	});
+}); 
+</script>
+<%= render 'layouts/footer' %>

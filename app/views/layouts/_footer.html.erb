@@ -1,0 +1,690 @@
+<div class="container-fluid footer" style="padding:20px 0 10px 0;">
+  
+    <div class="row" style="margin-left: 0px; margin-right: 0px;">
+      <div class="col-md-1 noneedxs">
+        &nbsp;
+      </div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-4 noneedxs" style="text-align:center;">
+            <img src="<%= asset_path('logo1.png') %>" style="float:left;"/>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12 padxs" style="text-align:center; padding-top:15px;">
+            <a class="footerlinks" href="#" style="font-family:osr;">ABOUT</a>
+            <a class="footerlinks" href="#" style="font-family:osr;">HOW IT WORKS</a>
+            <a class="footerlinks" href="#" style="font-family:osr;">FAQS</a>
+            <a class="footerlinks" href="#" style="font-family:osr;">CONTACT</a>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-12 text-right alignxs" style="">
+              <a class="" style="padding-top:18px;">
+                <button type="button" class="btn btn-default btn-circle1"><img src="<%= asset_path('fb.png') %>"/></button>
+              </a>
+              <a class="" style="padding-top:18px;">
+                <button type="button" class="btn btn-default btn-circle1"><img src="<%= asset_path('twitter.png') %>"/></button>
+              </a>
+              <a class="" style="padding-top:18px;">
+                <button type="button" class="btn btn-default btn-circle1"><img src="<%= asset_path('insta.png') %>"/></button>
+              </a>
+              <a class="" style="padding-top:18px;">
+                <button type="button" class="btn btn-default btn-circle1"><img src="<%= asset_path('pintrest.png') %>"/></button>
+              </a>
+              <a class="" style="padding-top:18px;">
+                <button type="button" class="btn btn-default btn-circle1"><img src="<%= asset_path('snapchat.png') %>"/></button>
+              </a>
+          </div>
+
+        </div>
+        <hr style="border-top: 1px solid; margin-top: 10px;">          
+        <div class="row" style="text-align:center;">
+          <p style="color:#ffffff;font-family:osr;" >©2015 Glass Always Full</p> 
+        </div>
+      </div>
+      <div class="col-md-1 noneedxs">
+        &nbsp;
+      </div>
+    </div>
+    
+  
+</div>
+<div class="modal fade bs-example-modal-lg" id="myModal_signin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="background-color: rgba(49, 62, 74, 0.93);">
+      <div class="modal-header nobrbt">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i style="font-size: 28px; color: white;" class="fa fa-times"></i></button>
+        
+      </div>
+      <div class="modal-body">
+        
+        <div class="row"> 
+          <div class="col-md-12" align="center">
+            <h1 style="color: white; display: inline-block; margin-top: 15px;font-size: 52px;">Subscribe</h1>
+            <h5 style="color:white;font-family:osb;">Signup with your email or login with your favorite social network.</h5>  
+            <h5 style="color:white;font-family:osb;">Then select subscription options on the next page.</h5>   
+          </div> 
+        </div>
+        <br/>
+        <div class="row"> 
+         <!--  <div class="col-xs-12 col-sm-6 col-md-6" align="center" style="padding-left: 40px; padding-right: 40px;border-right: 2px solid rgba(185, 185, 185, 0.29) !important;">
+            <label style="color: white; float: left;">Email</label>
+            <input style="background-color: transparent; height: 50px;color: white" type="text" name="email" class="form-control"
+            ></input></br>
+
+            <label style="color: white; float: left;">Password</label>
+            <input style="background-color: transparent; height: 50px;color: white" type="password" name="password" class="form-control"
+            ></input></br>
+            <div class="row">
+              <button type="button" class="btn btn-default" style="background-color: rgb(76, 142, 189); border: 0px none; color: white; float: left;margin-left: 15px;">Sign Up</button>
+            </div>
+            <h5 style="color: white; font-family: osb; float: left; margin-top: 20px;">Exsisting Subscriber?<span style="color: rgb(77, 151, 191); margin-left: 5px;">Sign In</span></h5>
+          </div>  -->
+          <div class="col-md-3 noneedsm noneedxs">
+            &nbsp;
+          </div>
+          <div class="col-xs-12  col-sm-12 col-md-6" align="center" style="padding-left: 40px; padding-right: 40px;">
+            <div class="row">
+              <a href="/auth/facebook/">
+                <div class="col-md-12" style="height: 50px; background-color: #506DA0;border-radius: 5px;">
+                    <div style="color: white; font-size: 18px; margin-top: 10px;"><i class="fa fa-facebook" style="margin-right: 20px;"></i><span>Sign up with Facebook</span></div>
+                </div>
+              </a>
+            </div>
+            <br/>
+            <div class="row">
+              <a href="/auth/google_oauth2/">
+                <div class="col-md-12" style="height: 50px; background-color: #E66956;border-radius: 5px;">
+                    <div style="color: white; font-size: 18px; margin-top: 10px;"><i class="fa fa-google-plus" style="margin-right: 20px;"></i><span>Sign up with Google+</span></div>
+                </div>
+              </a>
+            </div>
+            <br/>
+            <div class="row">
+              <a href="/auth/linkedin/">
+                <div class="col-md-12" style="height: 50px; background-color: #3789BA;border-radius: 5px;">
+                    <div style="color: white; font-size: 18px; margin-top: 10px;"><i class="fa fa-linkedin" style="margin-right: 20px;"></i><span>Sign up with Linkedin</span></div>
+                </div>
+              </a>
+            </div>
+          </div> 
+          <div class="col-md-3 noneedsm noneedxs">
+            &nbsp;
+          </div>
+        </div>          
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div id="loading" style="display:none;"><img id="loading_img" src="<%= asset_path('loader.gif') %>"/></div>
+
+
+<style type="text/css">
+
+@font-face {
+   font-family: osb;
+   src: url(<%= asset_url('OpenSans-Bold.ttf') %>) ;
+}
+
+@font-face {
+   font-family: osbi;
+   src: url(<%= asset_url('OpenSans-BoldItalic.ttf') %>) ;
+}
+
+@font-face {
+   font-family: oseb;
+   src: url(<%= asset_url('OpenSans-ExtraBold.ttf') %>) ;
+}
+
+@font-face {
+   font-family: osebi;
+   src: url(<%= asset_url('OpenSans-ExtraBoldItalic.ttf') %>) ;
+}
+
+@font-face {
+   font-family: osi;
+   src: url(<%= asset_url('OpenSans-Italic.ttf') %>) ;
+}
+
+@font-face {
+   font-family: osl;
+   src: url(<%= asset_url('OpenSans-Light.ttf') %>) ;
+}
+
+@font-face {
+   font-family: osli;
+   src: url(<%= asset_url('OpenSans-LightItalic.ttf') %>) ;
+}
+
+@font-face {
+   font-family: osr;
+   src: url(<%= asset_url('OpenSans-Regular.ttf') %>) ;
+}
+
+@font-face {
+   font-family: ossb;
+   src: url(<%= asset_url('OpenSans-Semibold.ttf') %>) ;
+}
+@font-face {
+   font-family: ossbi;
+   src: url(<%= asset_url('OpenSans-SemiboldItalic.ttf') %>) ;
+}
+
+
+body{
+  font-family: osb;
+}
+html, body {
+  height: 100%;
+}
+.bgimg {
+  min-height: 84.7%;
+  height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+  height: 84.7%;
+   /* the bottom margin is the negative value of the footer's height */
+}
+
+/*Top header css start*/
+
+@media only screen and (min-width: 1401px) {
+  #logo{
+    padding-left: 60px;
+    height: 60px;
+  }
+  .wineries{
+    margin-left: 5%;
+    padding-top: 15px;
+
+  }
+  .wineriesh5{
+    margin-top: 5px !important;
+    padding-right: 30px !important;
+  }
+  .headersearchform{
+    padding-top:5px;
+    padding-right: 30px;
+  }
+
+  .dd{
+    padding: 15px 0 0;
+    padding-right: 20px;
+  }
+
+  .advsearch {
+    width: 11%;
+  }
+  .modal-dialog{
+    width: 800px !important;
+  }
+}
+
+@media only screen and (min-device-width: 1201px) and (max-width: 1400px){
+  #logo{
+    padding-left: 30px;
+    height: 60px;
+  }
+  .wineries{
+    margin-left: 2%;
+    padding-top: 15px;
+  }
+  .wineriesh5{
+    margin-top: 5px !important;
+    padding-right: 5px !important;
+  }
+  .headersearchform{
+    padding-top:5px;
+    padding-right: 10px;
+  }
+  .navbar-form {
+    width: 15%;
+  }
+  .dd{
+    padding: 15px 0 0;
+    padding-right: 15px;
+  }
+  .advsearch {
+    width: 13%;
+  }
+  .modal-dialog{
+    width: 750px !important;
+  }
+
+}
+
+@media only screen and (min-device-width: 992px) and (max-width: 1200px){
+
+  #logo{
+    padding-left: 20px;
+    height: 60px;
+  }
+  .wineries{
+    display: none;
+  }
+  .wineriesh5{
+    margin-top: 5px !important;
+    padding-right: 5px !important;
+  }
+  .headersearchform{
+    padding-top:5px;
+    padding-right: 10px;
+  }
+  .navbar-form {
+    width: 25%;
+    margin-left: 5%;
+  }
+  .dd{
+    padding: 15px 0 0;
+    padding-right: 15px;
+  }
+  .advsearch {
+    display: none;
+  }
+  .dropdown2{
+    display: none;
+  }
+  .signinbtn {
+    width: 100px !important;    
+    margin-right: 10px !important;  
+  }
+  .dropdown1200{
+    margin-left: 15px;
+    display: block !important;
+  }
+  .alignxs{
+    width: 30% !important; 
+    padding-left: 0px !important;
+  }
+  .padxs{
+    width: 45% !important;
+    padding: 0px !important;
+    padding-top: 10px !important;
+  }
+  .footerlinks{
+    padding: 0px 10px !important;
+  }
+  .modal-dialog{
+    width: 700px !important;
+  }
+
+}
+@media only screen and (min-device-width: 768px) and (max-width: 991px) {
+.noneedsm{
+    display: none;
+  }
+  #logo{
+    padding-left: 20px;
+    height: 60px;
+  }
+  .wineries{
+    display: none;
+  }
+  .wineriesh5{
+    margin-top: 5px !important;
+    padding-right: 5px !important;
+  }
+  .headersearchform{
+    padding-top:5px;
+    padding-right: 10px;
+  }
+  .navbar-form {
+    width: 25%;
+    margin-left: 5%;
+  }
+  .dd{
+    padding: 15px 0 0;
+    padding-right: 15px;
+  }
+  .advsearch {
+    display: none;
+  }
+  .dropdown2{
+    display: none;
+  }
+  .signinbtn {
+    width: 100px !important;    
+    margin-right: 10px !important;  
+  }
+  .dropdown1200{
+    margin-left: 15px;
+    display: block !important;
+  }
+  .alignxs{
+    width: 30% !important; 
+    padding-left: 0px !important;
+  }
+  .padxs{
+    width: 45% !important;
+    padding: 0px !important;
+    padding-top: 10px !important;
+  }
+  .footerlinks{
+    padding: 0px 10px !important;
+  }
+  
+}
+
+@media only screen and (max-width: 767px){
+  .navmenu768px{
+    display: block !important;
+  }
+  .bigsearch{
+    display: none;
+  }
+  #logo{
+    padding-left: 5px;
+    height: 45px;
+  }
+  .wineries{
+    display: none;
+  }
+  .wineriesh5{
+    margin-top: 5px !important;
+    padding-right: 5px !important;
+  }
+  .headersearchform{
+    display: none;
+  }
+  .navbar-form {
+    width: 90%;
+    margin: 0px;
+    padding: 5px;
+  }
+  .dd{
+    padding: 0px;
+  }
+  .advsearch {
+    display: none;
+  }
+  .navbar-toggle{
+    margin-top: 5px;
+  }
+  .iconss{
+    display: none;
+  }
+  .dropdown2{
+    display: none;
+  }
+  #bs-example-navbar-collapse-1{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+  }
+  .navbar-header{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+  }
+  .btn-group > .btn, .btn-group-vertical > .btn {
+    position: relative;
+    float: unset;
+  }
+  .navbar-nav .open .dropdown-menu {   
+    background-color: #FFF;
+  }
+  .hdr{
+    padding: 0px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    top : 0px !important;
+  }
+  .bgimg{
+    padding: 0px !important;
+  }
+  .noneedxs{
+    display: none;
+  }
+  .alignxs{
+    text-align: center !important;
+  }
+  .padxs{
+    padding: 0px !important;
+    margin-bottom: 5px !important;
+  }
+  .footerlinks {
+    padding: 0px 5px !important; 
+  }
+}
+.hdr{
+  width: 100%;
+  position: relative;
+  z-index: 99999;
+  /*top: -100px;*/
+  background-color: rgba(255,255,255,0.6)!important;
+  padding: 6px;
+  border-radius: 0px!important;
+
+}
+.container-fluid{
+  padding-left: 0;
+  padding-right: 0;
+}
+.navbar{
+  margin-bottom: 0px !important;
+}
+
+.navbar-default{
+  background-color: transparent;
+}
+
+.drpdwn{
+  background: transparent;
+  border: 0px;
+}
+.ddicon{
+  padding-right: 10px;
+  vertical-align: middle;
+}
+.ddtext{
+  vertical-align: middle;
+}
+.btn-circle {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 20px;
+  background-color:#b03441;
+}
+
+.btn-circle:hover{
+  background-color:#b03441;
+}
+
+.btn-circle:focus, .btn-circle.focus {
+    color: #333;
+    background-color: #b03441;
+    border-color: #b03441;
+}
+
+.btn-circle1 {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 20px;
+  border: none;
+  background-color:#252525;
+}
+
+.btn-circle1:hover{
+  background-color:#252525 !important;
+}
+.footer{
+  background: black;
+}
+
+.footerlinks{
+  color: white;
+  padding: 0 20px 0 20px;
+}
+
+.footerlinks:hover{
+  color: white;
+  text-decoration: none;
+}
+.left_content{
+  padding-left: 100px;
+}
+
+.li_top{
+  padding: 10px 5px 0px 5px;
+}
+.signinbtn{
+  background-color:#b03441;
+  color:#ffffff;
+  width:125px;
+  height:40px;
+  font-family:osb;
+  margin-right: 20px;
+  border-radius: 6px;
+}
+
+.signinbtn:hover{
+  background-color:#b03441;
+  color:#ffffff;
+}
+
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+.btn-group.open .dropdown-toggle {
+    box-shadow: unset;
+}
+
+a:focus {
+  outline: unset;
+}
+.modal{
+  z-index: 99999;
+}
+.nobrbt {
+  border-bottom: 0px !important;
+}
+.ui-menu{
+  z-index: 99999 !important;
+}
+.username{
+  margin-top: 0px !important;
+}
+.wineriesh5{
+  font-size: 14px !important;
+}
+.li_top > .btn-default {
+  border-color: #B03441;
+}
+.li_top > .btn-default:focus,.li_top > .btn-default.focus {
+    color: #FFF;
+    background-color: #B03441;
+    border-color: #B03441;
+}
+.btn:focus,.btn:active:focus,.btn.active:focus,.btn.focus,.btn.focus:active,.btn.active.focus {
+    outline: none;
+    outline-offset: 0px;
+}
+#loading
+{
+
+position : fixed;
+z-index: 100;
+background-color: rgba(102, 102, 102, 0.14);
+background-repeat : no-repeat;
+background-position : center;
+left : 0;
+bottom : 0;
+right : 0;
+top : 0;
+}
+#loading_img
+{
+left : 45%;
+top : 40%;
+position : absolute;
+z-index : 101;
+margin-left : -16px;
+margin-top : -16px;
+}
+.blockUI{
+  background-color: unset !important;
+  border: 0px !important;
+}
+/*Top header css end*/
+</style>
+<link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+<script>
+$(document).ready(function() {
+  var cs = '<%= @city %>' ;
+  cs =cs.replace(/\&#39;/g, "'"); 
+  cs =cs.replace(/\&amp;/g, "&");
+  cities = cs.split(',');
+
+  $('.search-box').autocomplete({
+    source: cities ,
+    minLength:2,        
+  });
+
+
+ $(document).ajaxStart($.blockUI({ message: '<img src="<%= asset_path("loader.gif") %>"/>' })).ajaxStop($.unblockUI());
+});
+
+
+// $(document).ajaxStart(function() {
+//     $("#loading").show();
+// });
+// $(document).ajaxStop(function() {
+//     $("#loading").hide();
+// });
+
+
+</script>
+    
+</body>
+
+</html>

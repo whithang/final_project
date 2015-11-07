@@ -1,0 +1,958 @@
+<%= render 'layouts/header' %>
+  <div class="wind">
+    <div class="row" style="margin-right:0px;margin-left:0px">
+      <div class="col-md-1 noneedxs noneedsm">
+        &nbsp;
+      </div>
+      <div class="com-xs-12 col-sm-12 col-md-7">
+        <h2 style="color: black; display: inline-block; margin-top: 15px;">Arbios Cellars / Praxis - Locals Tasting Room</h2>
+        <div class="row" style="margin-top: 20px;">          
+          <div class="col-xs-12 col-sm-7 col-md-7">
+            <img src="<%= asset_path('airbios_img1.png') %>" style="width: 100%;">
+            <i class="fa fa-heart"></i>
+            <div class="row" style="margin-top: 15px;">
+              <!-- Slider Image here -->
+              <div class="col-xs-1 col-sm-1 col-md-1 farrow" style="color: #6C7688;font-size: 20px;font-weight: bold;text-align: center;margin-top: 5%;">
+                <i class="fa fa-chevron-left"></i>
+              </div>
+              <div class="col-xs-10 col-sm-10 col-md-10">
+                <div class="row">
+                  <div class="col-xs-4 col-sm-4 col-md-4"><img src="<%= asset_path('airbios_img2.png') %>" style="width: 100%;"></div>
+                  <div class="col-xs-4 col-sm-4 col-md-4"><img src="<%= asset_path('airbios_img3.png') %>" style="width: 100%;"></div>
+                  <div class="col-xs-4 col-sm-4 col-md-4"><img src="<%= asset_path('airbios_img4.png') %>" style="width: 100%;"></div>
+                </div>
+              </div>
+              <div class="col-xs-1 col-sm-1 col-md-1 farrow" style="color: #6C7688;font-size: 20px;font-weight: bold;text-align: center;margin-top: 5%;">
+                <i class="fa fa-chevron-right"></i>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-5 col-md-5 martxs">
+            <div style="margin-bottom: 10px;">
+                <img src="<%= asset_path('star1.png') %>">
+                <img src="<%= asset_path('star1.png') %>">
+                <img src="<%= asset_path('star1.png') %>">
+                <img src="<%= asset_path('star1.png') %>">
+                <img src="<%= asset_path('star1.png') %>">
+            </div>
+            <div class="row">
+              <div class="col-xs-1 col-sm-1 col-md-1" style="padding-right: 0px;vertical-align: bottom;"><img src="<%= asset_path('map-pin-small.png') %>"></div>
+              <div class="col-xs-11 col-md-11 col-md-11 addr">14347 Sonoma Highway 12, Glen Ellen, CA 95442</div>
+            </div>
+            <div class="row">
+              <div class="col-xs-1 col-sm-1 col-md-1" style="padding-right: 0px;vertical-align: bottom;"><img src="<%= asset_path('call.png') %>"></div>
+              <div class="col-xs-11 col-sm-11 col-md-11 addr">707-9352600</div>
+            </div>
+            <h6 style="font-family: osb;color: #6b7589;">Open Daily 11:00 am - 6:00 pm</h6>
+            
+            <button class="btn btn-danger reservation_btn" type="button">Here Now?</button><br/>
+            <button class="btn btn-danger reservation_btn" type="button">Book a Reservation</button><br/>
+            <button class="btn btn-danger reservation_btn" type="button">Add to Memory</button><br/>
+          </div>
+        </div>
+        
+
+      </div>
+      <div class="com-xs-12 col-sm-12 col-md-4 padsm0" style="padding-right:0px">
+        <div class="" id="map-container">
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 25px;margin-right:0px;margin-left:0px">
+      <div class="col-md-1 noneedxs noneedsm">
+        &nbsp;
+      </div>
+      <div class="col-sm-6 col-md-7">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <h4 style="font-family: osb;color: #6b7589;">About the Winery</h4>
+            <hr style="border-top: 1px solid;color:#ebebeb;">
+            <div class="text_css" style="line-height: 1.42857;">
+              Arbios Cellars/Praxis Cellars is a small Sonoma County family wine business; Bill Arbios makes the wine. Bill made wine for many prominent wineries (including Lyeth, Fieldstone and Jarvis) over the last 40 years. He began Arbios Cellars in 1993 with 125 cases and Praxis in 2000. Unlike the Meritage wines he made at Lyeth, all of the Arbios & Praxis wines are 100% of their varietal from a single, sustainably farmed vineyard.
+            </div>
+          </div>
+        </div>
+
+        <div class="row"  style="margin-top: 35px;">
+          <div class="col-sm-12 col-md-6">
+            <h4 style="font-family: osb;color: #6b7589;">Contact Information</h4>
+            <hr style="margin-right: -15px;">
+           
+            <span class="text_css">
+              <img src="<%= asset_path('call.png') %>" style="width: 15px;">
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 15px;">707-9352600</span>
+            <br/>
+
+            <span class="text_css">
+              <i class="fa fa-envelope " style="width: 20px;"></i>
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;">winery@email.com</span>
+            <br/>
+
+            <span class="text_css">
+              <i class="fa fa-laptop " style="width: 20px;"></i>
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;">www.winery.com</span>
+            <br/>
+
+            <span class="text_css">
+              <i class="fa fa-clock-o " style="width: 20px;"></i>
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;">Open: <span style="font-family:ossb;color:#b13441">Daily 11:00 am - 6:00 pm</span></span>
+            <br/>
+          </div>
+
+          <div class="col-sm-12 col-md-6">
+            <h4 class="martsm" style="font-family: osb;color: #6b7589;">Goot to Know</h4>
+            <hr class="marlsm" style="margin-left: -15px;">
+
+            <span class="text_css">
+              <i class="fa fa-money " style="width: 20px;"></i>
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;">Tasting room fee: <span style="font-family:ossb;color:#b13441">$0.00</span></span>
+            <br/>
+
+            <span class="text_css">
+              <i class="fa fa-paw " style="width: 20px;"></i>
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;">Pets Allowed: <span style="font-family:ossb;color:#b13441">Yes</span></span>
+            <br/>
+
+            <span class="text_css">
+              <img src="<%= asset_path('basket.png') %>" style="width: 20px;">
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;">Picnic Area: <span style="font-family:ossb;color:#b13441">Yes</span></span>
+            <br/>
+
+            <span class="text_css">
+              <img src="<%= asset_path('food.png') %>" style="width: 20px;">
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;">Food Served: <span style="font-family:ossb;color:#b13441">Yes</span></span>
+            <br/>
+
+            <span class="text_css">
+              <img src="<%= asset_path('family.png') %>" style="width: 20px;">
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 10px;">Kid/Family Friendly: <span style="font-family:ossb;color:#b13441">Yes</span></span>
+            <br/>
+
+            <span class="text_css">
+              <img src="<%= asset_path('glass.png') %>" style="width: 15px;">
+            </span>
+            <span class="text_css"style="padding-left: 0px;text-align:left;margin-left: 15px;">Atmosphere: <span style="font-family:ossb;color:#b13441">Boutique</span></span>
+            <br/>
+          </div>
+        </div>
+
+        <div class="row"  style="margin-top: 35px;">
+          <div class="col-md-6">
+            <h4 style="font-family: osb;color: #6b7589;">Wine Varietals</h4>
+            <hr style="margin-right: -15px;">
+            <div class="text_css">Cabernet Sauvignon</div>
+            <div class="text_css">Merlot</div>
+            <div class="text_css">Pinot Noir</div>
+            <div class="text_css">Viognier</div>
+            <div class="text_css">Lagrein</div>
+          </div>
+          <div class="col-md-6">
+            <h4 class="martsm" style="font-family: osb;color: #6b7589;">Price Range of Wine</h4>
+            <hr class="marlsm" style="margin-left: -15px;">
+            <div class="text_css">$22.99 - $299.00</div>
+
+          </div>
+        </div>
+
+        <div class="row"  style="margin: 35px -15px;margin-top: 36px;">
+          <div class="col-md-6">
+            <h4 class="martsm" style="font-family: osb;color: #6b7589;">Available Tours</h4>
+            <hr class="marlsm" style="margin-right: -15px;">
+            <div class="text_css">Lorem ipsum dolor sit amet.</div>
+            <div class="text_css">Donec sed eros ac erat posuere tincidunt.</div>
+            <div class="text_css">Vestibulum porta enim ac turpis fermentum.</div>
+          </div>
+          <div class="col-md-6">
+            <h4 class="martsm" style="font-family: osb;color: #6b7589;">Special Events Coming Up</h4>
+            <hr class="marlsm" style="margin-left: -15px;">
+            <div class="text_css"><span style="color:#b13441">June 22</span> Tahoe City Wine Walk</div>
+            <div class="text_css"><span style="color:#b13441">August 17 & 18</span> Tahoe City Wine Family Winemakers of CA Tasting</div>
+            <div class="text_css"><span style="color:#b13441">August 17 & 18 </span> Family Winemakers of CA Tasting</div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="row" >
+          <div class="col-sm-12 col-md-12">
+            <h4 style="font-family: osb;color: #6b7589;">Your Reviews</h4>
+            <hr style="border-top: 1px solid;color:#ebebeb;">
+            <div class="row">
+              <div class="col-xs-7 col-sm-7 col-md-7">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+              </div>
+              <div class="col-xs-5 col-sm-5 col-md-5">
+                <div style="float:right">
+                  <span><img src="<%= asset_path('calender1.png') %>"></span>
+                  <span class="text_css" style="font-size:12px;font-family: osb;">July, 12, 2015</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="text_css" style="line-height: 1.42857;margin-top: 7px;">
+              Loved this place, gotta go back! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat faucibus leo, bibendum sagittis tortor condimentum at.
+            </div>
+
+            <button class="btn btn-default addReview" type="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil" style="margin-right: 10px;"></i>Add Another Review</button>
+            
+          </div>
+        </div>
+
+        <div class="row">  
+          <div class="col-xs-5 col-sm-5 col-md-5" style="padding-right: 0px;">
+            <h4 style="font-family: osb;color: #6b7589;">Friends’ Reviews</h4>
+          </div>
+          <div class="col-xs-7 col-sm-7 col-md-7 btn-group" style="">
+            <button type="button" style="float:right;color:#acacac;border-color:#ebebeb" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              1st Connections <span class="glyphicon glyphicon-chevron-down" style="top: 3px;"></span>
+            </button>
+
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>  
+        <hr style="margin-top: 13px;">
+        <div class="row">
+          <div class="col-xs-7 col-sm-7 col-md-7">
+              <img src="<%= asset_path('star1.png') %>">
+              <img src="<%= asset_path('star1.png') %>">
+              <img src="<%= asset_path('star1.png') %>">
+              <img src="<%= asset_path('star1.png') %>">
+              <img src="<%= asset_path('star1.png') %>">
+          </div>
+          <div class="col-xs-5 col-sm-5 col-md-5">
+            <div style="float:right">
+              <span><img src="<%= asset_path('calender1.png') %>"></span>
+              <span class="text_css" style="font-size:12px;font-family: osb;">July, 12, 2015</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text_css" style="line-height: 1.42857;margin: 7px 0px;">
+          Loved this place, gotta go back! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat faucibus leo, bibendum sagittis tortor condimentum at.
+        </div>
+
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3">
+            <div style="background-color: #ebebeb;width: 54px;height: 54px;border-radius:5px">
+              <img src="<%= asset_path('user-icon.png') %>" style="position: relative;top: 11%;left: 13%;">
+            </div>
+         </div>
+          <div class="col-xs-9 col-sm-9 col-md-9"> <span class="text_css" style="position: relative;top: 10px;font-family: osb;">John Doe</span></div>
+        </div>
+
+        <hr style="margin-top: 13px;">
+        <div class="row">
+          <div class="col-xs-7 col-sm-7 col-md-7">
+              <img src="<%= asset_path('star1.png') %>">
+              <img src="<%= asset_path('star1.png') %>">
+              <img src="<%= asset_path('star1.png') %>">
+              <img src="<%= asset_path('star1.png') %>">
+              <img src="<%= asset_path('star1.png') %>">
+          </div>
+          <div class="col-xs-5 col-sm-5 col-md-5">
+            <div style="float:right">
+              <span><img src="<%= asset_path('calender1.png') %>"></span>
+              <span class="text_css" style="font-size:12px;font-family: osb;">July, 12, 2015</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text_css" style="line-height: 1.42857;margin: 7px 0px;">
+          Loved this place, gotta go back! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat faucibus leo, bibendum sagittis tortor condimentum at.
+        </div>
+
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3">
+            <div style="background-color: #ebebeb;width: 54px;height: 54px;border-radius:5px">
+              <img src="<%= asset_path('user-icon.png') %>" style="position: relative;top: 11%;left: 13%;">
+            </div>
+         </div>
+          <div class="col-xs-9 col-sm-9 col-md-9"> <span class="text_css" style="position: relative;top: 10px;font-family: osb;">John Doe</span></div>
+        </div>
+
+        <hr style="margin-top: 13px;">
+        <div class="row">
+          <div class="col-xs-7 col-sm-7 col-md-7">
+              <img src="<%= asset_path('star1.png') %>">
+              <img src="<%= asset_path('star1.png') %>">
+              <img src="<%= asset_path('star1.png') %>">
+              <img src="<%= asset_path('star1.png') %>">
+              <img src="<%= asset_path('star1.png') %>">
+          </div>
+          <div class="col-xs-5 col-sm-5 col-md-5">
+            <div style="float:right">
+              <span><img src="<%= asset_path('calender1.png') %>"></span>
+              <span class="text_css" style="font-size:12px;font-family: osb;">July, 12, 2015</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text_css" style="line-height: 1.42857;margin: 7px 0px;">
+          Loved this place, gotta go back! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat faucibus leo, bibendum sagittis tortor condimentum at.
+        </div>
+
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3">
+            <div style="background-color: #ebebeb;width: 54px;height: 54px;border-radius:5px">
+              <img src="<%= asset_path('user-icon.png') %>" style="position: relative;top: 11%;left: 13%;">
+            </div>
+         </div>
+          <div class="col-xs-9 col-sm-9 col-md-9"> <span class="text_css" style="position: relative;top: 10px;font-family: osb;">John Doe</span></div>
+        </div>           
+        
+      </div>
+      <div class="col-md-1 noneedxs noneedsm">
+        &nbsp;
+      </div>
+    </div>
+
+    <div class="row martsm" style="margin-right:0px;margin-left:0px;background-color: #F0F0F0;">
+      <div class="col-md-1 noneedxs noneedsm">
+        &nbsp;
+      </div>
+      <div class="col-sm-12 col-md-10">
+        <div >
+          <h4 style="font-family:osb;color:#6b7589">Yelp Reviews</h4>
+          <hr>
+          <div class="row">
+            <div class="col-sm-2 col-md-2">
+              <div style="background-color: #ebebeb;width: 54px;height: 54px;border-radius:5px">
+                <img src="<%= asset_path('user-icon.png') %>" style="position: relative;top: 11%;left: 13%;">
+              </div>
+              <div class="text_css" style="font-family:osb">John Doe</div>
+            </div>
+            <div class="col-sm-10 col-md-10" style="padding-left: 0px;">
+              <div>
+                <span>
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                </span>
+                <span style="margin-left:5px"><img src="<%= asset_path('calender1.png') %>"></span>
+                <span class="text_css" style="font-size:12px;font-family: osb;">July, 12, 2015</span>
+                <div class="text_css" style="line-height: 1.42857;">
+                  Loved this place, gotta go back! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat faucibus leo, bibendum sagittis tortor condimentum at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat faucibus leo, bibendum sagittis tortor condimentum at. Phasellus et magna eget elit pellentesque volutpat. Duis molestie placerat fermentum. Morbi in tellus porttitor arcu efficitur vulputate et a libero. 
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="row">
+            <div class="col-sm-2 col-md-2">
+              <div style="background-color: #ebebeb;width: 54px;height: 54px;border-radius:5px">
+                <img src="<%= asset_path('user-icon.png') %>" style="position: relative;top: 11%;left: 13%;">
+              </div>
+              <div class="text_css" style="font-family:osb">John Doe</div>
+            </div>
+            <div class="col-sm-10 col-md-10" style="padding-left: 0px;">
+              <div>
+                <span>
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                  <img src="<%= asset_path('star1.png') %>">
+                </span>
+                <span style="margin-left:5px"><img src="<%= asset_path('calender1.png') %>"></span>
+                <span class="text_css" style="font-size:12px;font-family: osb;">July, 12, 2015</span>
+                <div class="text_css" style="line-height: 1.42857;">
+                  Loved this place, gotta go back! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat faucibus leo, bibendum sagittis tortor condimentum at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat faucibus leo, bibendum sagittis tortor condimentum at. Phasellus et magna eget elit pellentesque volutpat. Duis molestie placerat fermentum. Morbi in tellus porttitor arcu efficitur vulputate et a libero. 
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+        </div>
+      </div>
+      <div class="col-md-1 noneedxs noneedsm">
+        &nbsp;
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+</div>
+
+<div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel" style="font-family: osb;color: #848C9C;">Review</h4>
+      </div>
+      <div class="modal-body">
+        <div class="wind">
+            <div class="row">
+              <div class="col-md-1 noneedxs noneedsm">
+                &nbsp;
+              </div>
+              <div class="col-md-10">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="<%= asset_path('winery.png') %>" style="width: 100%;height:100px">
+                    <label style="font-family: osb;font-size: 14px;margin: 10px 0px;color: #848c9c;">Thoughts, Likes, Dislikes…<span style="color: #b03441;">*</span></label>
+                  </div>
+                  <div class="col-xs-12 col-sm-9 col-md-9">
+                    <h3 style="font-family:osb;color:black;">Edit My Review for <br/><span style="font-family:osbi;color:#b03441;display: inherit;">Arbios Cellars / Praxis - Locals Tasting Room</span></h3>
+                    <p style="color: #afb4be;font-family: osr;font-size: 15px;">Update any fields you want to edit:</p>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-9 col-sm-10 col-md-10">
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Message" style="min-height: 130px;"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div style="background-color: #ebebeb;width: 54px;height: 54px;border-radius:5px">
+                      <img src="<%= asset_path('user-icon.png') %>" style="position: relative;top: 11%;left: 13%;">
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div style="margin: 0px 15px;">
+                    <h4 style="font-family:osb;font-size:15px;color:#6b7589;">Describe the atmosphere:</h4>
+                    <div class="row">
+                      <div class="col-xs-6 col-sm-3 col-md-3">
+                        <div class="checkbox">
+                          <label style="font-family:osr;color:#6b7589;"><input type="checkbox" value="">boutique</label>
+                        </div>
+                        <div class="checkbox">
+                          <label style="font-family:osr;color:#6b7589;"><input type="checkbox" value="">intimate/quiet</label>
+                        </div>
+                        <div class="checkbox">
+                          <label style="font-family:osr;color:#6b7589;"><input type="checkbox" value="">bustling</label>
+                        </div>
+                      </div>
+                      <div class="col-xs-6 col-sm-3 col-md-3">
+                        <div class="checkbox">
+                          <label style="font-family:osr;color:#6b7589;"><input type="checkbox" value="">upscale/refined</label>
+                        </div>
+                        <div class="checkbox">
+                          <label style="font-family:osr;color:#6b7589;"><input type="checkbox" value="">casual</label>
+                        </div>
+                        <div class="checkbox">
+                          <label style="font-family:osr;color:#6b7589;"><input type="checkbox" value="">social</label>
+                        </div>
+                      </div>
+                      <div class="col-xs-6 col-sm-3 col-md-3">
+                        <div class="checkbox">
+                          <label style="font-family:osr;color:#6b7589;"><input type="checkbox" value="">party central</label>
+                        </div>
+                        <div class="checkbox">
+                          <label style="font-family:osr;color:#6b7589;"><input type="checkbox" value="">grand</label>
+                        </div>
+                        <div class="checkbox">
+                          <label style="font-family:osr;color:#6b7589;"><input type="checkbox" value="">modern</label>
+                        </div>
+                      </div>
+                      <div class="col-xs-6 col-sm-3 col-md-3">
+                        <div class="checkbox">
+                          <label style="font-family:osr;color:#6b7589;"><input type="checkbox" value="">impressive</label>
+                        </div>
+                        <div class="checkbox">
+                          <label style="font-family:osr;color:#6b7589;"><input type="checkbox" value="">indoor</label>
+                        </div>
+                        <div class="checkbox">
+                          <label style="font-family:osr;color:#6b7589;"><input type="checkbox" value="">outdoor</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row" style="padding-left: 15px;">
+                  <h4 style="font-family:osb;font-size:15px;color:#6b7589;">Star Rating<span style="color: #b03441;"> * </span></h4>
+                  
+                    <span style="color:#6b7589;font-family:osr;font-size: 15px;position: relative;top: 4px;">Bad &nbsp;</span>
+                    <span>
+                      <img src="<%= asset_path('star1.png') %>">
+                      <img src="<%= asset_path('star1.png') %>">
+                      <img src="<%= asset_path('star1.png') %>">
+                      <img src="<%= asset_path('star1.png') %>">
+                      <img src="<%= asset_path('star1.png') %>">
+                    </span>
+                    <span style="color:#6b7589;font-family:osr;font-size: 15px;position: relative;top: 4px;">&nbsp; Excellent</span>
+                  <br><br>
+                  <h4 style="color:#6b7589;font-family:osr;font-size: 15px;">My Photographic Memory<span style="font-family: osi;">(jpeg, png, avi, bmp, mp4)</span></h4>
+                  <div style="position:relative">
+                    <!-- <button type="button" class="btn btn-default choosefile" >Choose file</button> -->
+                    <button type="button" class="btn btn-default choosefile">Choose file</button>
+                    <input type="file" id="upload" value="Choose file" style="border:0px;color: #9ba1ad;font-family:osi;position: absolute;top: 4px;z-index: -1;left: 46px;">
+                    <img src="<%= asset_path('camera-icon.png') %>" style="position: absolute;top: 8px;left: 10px;">
+                  </div>
+                  <br>
+                  <button type="button" class="btn btn-default submit_btn" >Submit Updated Review</button>
+                  <br><br>
+                </div>
+              </div>
+              <div class="col-md-1 noneedxs noneedsm">
+                &nbsp;
+              </div>
+            </div>
+                 
+
+
+                  
+                
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+@media only screen and (min-width: 1401px) {
+  #map-container{
+    height: 520px;
+  }
+  .modal-dialog{
+    width: 800px !important;
+  }
+}
+
+@media only screen and (min-device-width: 1201px) and (max-width: 1400px){
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    height: 230px !important;
+  }
+  .farrow{
+    margin-top: 3% !important;
+  }
+  #map-container{
+    height: 420px;
+  }
+  .modal-dialog{
+    width: 750px !important;
+  }
+  
+}
+
+@media only screen and (min-device-width: 992px) and (max-width: 1200px){
+  #map-container{   
+    height:  400px !important;
+  }
+  .modal-dialog{
+    width: 700px !important;
+  }
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    height: 230px !important;
+  }
+  
+  .topsrch{
+    width: 100px !important;
+  }
+  .farrow{
+    margin-top: 2% !important;
+    padding: 0px !important;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-width: 991px) {
+  #map-container{   
+    height:  400px !important;
+  }
+  .padsm0{
+    padding: 0px;
+    margin-top: 10px;
+  }
+  .mapcnt{
+    padding: 0px !important;
+  }
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    height: 230px !important;
+  }
+  .topsrch{
+    width: 100px !important;
+  }
+  .marlsm{
+    margin-left: 0px !important;
+  }
+  .martsm{
+    margin-top: 15px !important;
+  }
+ 
+}
+
+@media only screen and (max-width: 767px){
+  #map-container{
+    height:  200px !important;
+  }
+  .padsm0{
+    padding: 0px;
+    margin-top: 10px;
+  }
+  .farrow{
+    margin-top: 1% !important;
+    padding: 0px !important;
+  }
+  .marlsm{
+    margin-left: 0px !important;
+  }
+  .martsm{
+    margin-top: 15px !important;
+  }
+  .martxs{
+    margin-top: 10px !important;
+  }
+  .mapcnt{
+    padding: 0px !important;
+  }
+  h2{
+    font-size: 26px !important;
+  }
+  h5{
+    font-size: 12px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  h4{
+    font-size: 14px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .article_head{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label{
+    margin-top: 5px !important;
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 5px !important;
+  }
+  .wnryimg{
+    width: 100% !important;
+    height: 230px !important;
+  }
+  .topsrch{
+    margin-top: 10px;
+    width: 100px !important;
+  }
+  .padxs0{
+    padding: 0px !important;
+  }
+  .fa-heart{
+    right: 15px !important;
+  }
+
+}
+
+
+.hdr{
+	box-shadow: 1px 1px 6px;
+}
+
+.slider-selection{
+  background-image: linear-gradient(to bottom, #B13441 0%, #B13441 100%) !important;
+}
+
+.slider-handle{
+  background-image: linear-gradient(to bottom, #B13441 0%, #B13441 100%) !important;
+}
+
+.left_content{
+  padding-left: 100px;
+}
+
+.li_top{
+  padding: 18px 4px 0px 4px;
+}
+
+.signinbtn{
+    background-color:#b03441;
+    color:#ffffff;
+    width:125px;
+    height:40px;
+    font-family:osb;
+    margin-right: 20px;
+    border-radius: 6px;
+  }
+
+  .signinbtn:hover{
+    background-color:#b03441;
+    color:#ffffff;
+  }
+
+  .article_head{
+    font-family: osb;
+    color: #6c7688;
+  }
+
+  .time{
+    width: 105px;
+    height: 35px;
+    text-align: left;
+    padding-top: 2px;
+    padding-left: 4px;
+    border: 2px solid rgb(176, 52, 65);
+    border-radius: 5px;
+    color:  #b03441;
+    font-family: osb;
+    font-size: 18px;
+  }
+
+  .date{
+    width: 105px;
+    height: 35px;
+    text-align: left;
+    padding-top: 2px;
+    color:  #b03441;
+    font-family: osb;
+    font-size: 18px;
+  }
+
+  .article_label{
+    font-family: osr;
+    font-size: 20px;
+    font-weight: normal;
+    color: #b03441;
+  }
+
+  .reservation_btn{
+    background-color: #b03441;
+    font-family: osb;
+    font-size: 14px;
+    padding: 8px 24px;
+    border-radius: 8px;
+    min-width: 185px;
+    margin-top: 10px;
+  }
+
+  .reservation_btn:hover{
+    background-color: #b03441 !important;
+    color: #FFFFFF !important;
+  }
+
+  .addr{
+    color: #6B7589;
+    font-size: 15px;
+    font-family: osr;
+    padding-left: 5px;
+  }
+
+  .fa-heart{
+  position: absolute;
+  top: 10px;
+  font-size: 27px;
+  right: 30px;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.text_css{
+  font-size: 15px;
+  font-family: osr;
+  color: #6B7589;
+  line-height: 2;
+  text-align: justify;
+}
+
+.addReview{
+  background-color: rgb(235, 235, 235);
+  border-color: rgb(235, 235, 235);
+  font-family: osb;
+  font-size: 15px;
+  color: rgb(107, 117, 137);
+  width: 100%;
+  border-radius: 0;
+  margin: 15px 0px;
+}
+
+.addReview:hover{
+  background-color: rgb(235, 235, 235);
+  color: rgb(107, 117, 137);
+  border-color: rgb(235, 235, 235);
+}
+
+.addReview.active, .addReview:active, .open > .dropdown-toggle.btn-default {
+    background-image: none;
+    background-color: rgb(235, 235, 235);
+    color: rgb(107, 117, 137);
+    border-color: rgb(235, 235, 235);
+}
+
+.addReview.focus, .addReview:focus, .btn:hover {
+    background-image: none;
+    background-color: rgb(235, 235, 235);
+    color: rgb(107, 117, 137);
+    border-color: rgb(235, 235, 235);
+}
+
+
+.modal{
+  z-index: 99999;
+}
+.choosefile{
+  font-family: osb;
+  font-size: 14px;
+  color: #FFF;
+  background-color: #6C7688;
+  width: 130px;
+  text-align: right;
+  border-radius: 5px;
+  border:0px;
+}
+
+.choosefile:hover{
+  color: #FFF;
+  background-color: #6C7688;
+}
+
+.submit_btn{
+    font-family: osb;
+    font-size: 18px;
+    color: #fff;
+    background-color: #b03441;
+    border-radius: 8px;
+    padding: 7px 20px;
+  }
+
+  .submit_btn:hover{
+    color: #fff;
+    background-color: #b03441;
+  }
+
+</style>
+<script >
+  var slider = new Slider('#ex2', {});
+</script>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script> 
+$( document ).ready(function() {
+
+  $(document).on('click','.choosefile',function(){
+      $('#upload').trigger('click');
+    });
+}); 
+
+  function init_map() {
+var var_location = new google.maps.LatLng(45.430817,12.331516);
+
+    var var_mapoptions = {
+      center: var_location,
+      zoom: 14
+    };
+
+var var_marker = new google.maps.Marker({
+  position: var_location,
+  map: var_map,
+  title:"Venice"});
+
+    var var_map = new google.maps.Map(document.getElementById("map-container"),
+        var_mapoptions);
+
+var_marker.setMap(var_map); 
+
+  }
+
+  google.maps.event.addDomListener(window, 'load', init_map);
+
+</script>
+<%= render 'layouts/footer' %>
